@@ -1,10 +1,7 @@
-// Documentation.tsx
-
-import React from "react";
-import { Routes as DocsRoutes } from "../docs";
-import { Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import DocsSidebar from "../components/DocsSidebar";
+import { Routes as DocsRoutes } from "../docs";
 
 const Documentation: React.FC = () => {
   return (
@@ -16,27 +13,43 @@ const Documentation: React.FC = () => {
         <div>
           {/* Breadcrumbs */}
           <Breadcrumbs />
-          <Route
-            path="/"
-            element={
-              <>
-                <h1>Explore Documentation</h1>
-                <Outlet />
-              </>
-            }
-          >
-            {/* Rendered for /docs/classes and /docs/functions */}
-            {/* Individual Documentation Pages */}
-            {DocsRoutes.map((routeGroup) =>
-              routeGroup.routes.map((route) => (
+          <Routes>
+            <Route path="/">
+              {/* Render routes for each category */}
+              {DocsRoutes.map((routeGroup) => (
                 <Route
-                  key={route.slug}
-                  path={`/docs${routeGroup.slug}${route.slug}`}
-                  element={<route.element />}
+                  key={routeGroup.slug}
+                  path={`${routeGroup.slug}`}
+                  element={
+                    <>
+                      <h1>{routeGroup.name}</h1>
+                      <ul>
+                        {routeGroup.routes.map((route) => (
+                          <li key={route.slug}>
+                            <Link to={`/docs${routeGroup.slug}${route.slug}`}>
+                              <h3>{route.name}</h3>
+
+                              <p>{route.desc}</p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  }
                 />
-              ))
-            )}
-          </Route>
+              ))}
+              {/* Individual Documentation Pages */}
+              {DocsRoutes.map((routeGroup) =>
+                routeGroup.routes.map((route) => (
+                  <Route
+                    key={route.slug}
+                    path={`${routeGroup.slug}${route.slug}`}
+                    element={<route.element />}
+                  />
+                )),
+              )}
+            </Route>
+          </Routes>
         </div>
       </div>
     </>
