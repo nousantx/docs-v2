@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
+
 :root {
   --message: "Ayo sholat!";
+  --tx_fs: flex-start;
+  --tx_font-body: "gabarito", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
