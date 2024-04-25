@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import DocsSidebar from "../components/DocsSidebar";
 import { Routes as DocsRoutes } from "../docs";
@@ -28,7 +28,6 @@ const Documentation: React.FC = () => {
                           <li key={route.slug}>
                             <Link to={`/docs${routeGroup.slug}${route.slug}`}>
                               <h3>{route.name}</h3>
-
                               <p>{route.desc}</p>
                             </Link>
                           </li>
