@@ -1,5 +1,3 @@
-import React from "react";
-
 const Flex = () => {
   return <h2>Its Flex Documentation</h2>;
 };
