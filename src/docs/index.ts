@@ -1,8 +1,14 @@
-const Docs = [
+import { Functions } from "./functions";
+import { Classes } from "./classes";
+import { RouteGroup } from "../types/docsTypes";
+
+export const Routes: RouteGroup[] = [
   {
-    slug: "/docs",
-    docsItemSlug: ["/classes", "/function", "/extras"],
+    slug: "/classes",
+    routes: Classes,
+  },
+  {
+    slug: "/functions",
+    routes: Functions,
   },
 ];
-
-export default Docs;
