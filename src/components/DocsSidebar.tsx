@@ -1,15 +1,17 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { useStyles } from "../hooks/useStyles";
 
 const DocsSidebar: React.FC = () => {
   const location = useLocation();
   const isInDocs = location.pathname.startsWith("/docs");
-
   if (!isInDocs) {
     return null;
   }
 
+  useStyles();
+
   return (
-    <div style={{ width: "200px", marginRight: "20px" }}>
+    <div className="bg-[neutral-200] docs-sidebar">
       <h3>Documentation</h3>
       <ul>
         <li>
