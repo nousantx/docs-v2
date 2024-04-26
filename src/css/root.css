@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Gabarito:wght@400..900&display=swap");
 
 :root {
   --message: "Ayo sholat!";
   --tx_fs: flex-start;
-  --tx_font-body: "gabarito", sans-serif;
+  --tx_fe: flex-end;
+  --tx_sb: space-between;
+  --font-body: "gabarito", sans-serif;
+  --font-mono: "fira code", monospace;
 }
 
 * {
@@ -12,4 +15,41 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.docs-sidebar {
+  grid-column: 1 / span 3; /* Sidebar takes 3 columns */
+}
+
+.main-content {
+  grid-column: 4 / span 6; /* Main content takes 6 columns */
+}
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Change to single column layout on smaller screens */
+  }
+
+  .docs-sidebar {
+    display: none; /* Hide sidebar on smaller screens */
+  }
+
+  .main-content {
+    grid-column: 1 / span 12; /* Main content takes full width on smaller screens */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .on-this-page {
+    grid-column: 10 / span 3; /* On This Page section takes 3 columns, starting from the 10th column */
+  }
 }
