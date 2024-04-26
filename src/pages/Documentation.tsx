@@ -8,10 +8,9 @@ import DocsSidebar from "../components/DocsSidebar";
 const Documentation: React.FC = () => {
   return (
     <>
-      <div className="grid-container">
+      <div className="d-[docs-layout] flex-wrap">
         <DocsSidebar />
-
-        <div className="main-content">
+        <section className="main-content fx-70%">
           <div className="ph-2rem">
             <Breadcrumbs />
           </div>
@@ -52,9 +51,11 @@ const Documentation: React.FC = () => {
               )}
             </Route>
           </Routes>
-        </div>
-        <div className="on-this-page bg-red w-full">
-          <h3>Hello World!</h3>
+        </section>
+        <div className="fx-15% on-this-page bg-none max-md-none">
+          <h4 className="text-xl font-semibold tracking-tight">
+            On this page
+          </h4>
         </div>
       </div>
     </>
