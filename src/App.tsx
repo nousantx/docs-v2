@@ -3,34 +3,15 @@ import { Routes, Route, Link } from "react-router-dom";
 import Documentation from "./pages/Documentation";
 import Code from "./components/Code";
 import { useStyles } from "./hooks/useStyles";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   useStyles();
-
-  //   const code = `import { useLayoutEffect } from "react";
-  // import tenoxui, { defineProps, makeStyles } from "tenoxui";
-  // import { styles } from "./style";
-
-  // export function useStyles(...hooks: any) {
-  //   useLayoutEffect(() => {
-  //     // new props needed
-  //     defineProps({
-  //       d: "display",
-  //       scroll: "scrollBehavior",
-  //     });
-  //     /**
-  //      * apply custom styles. Note: always use makeStyles after initiate -
-  //      * tenoxui function if define utility classes (optional)
-  //      */
-  //     makeStyles(styles);
-  //     // init tenoxui function to handle all styles
-  //     tenoxui();
-  //   }, [hooks]);
-  // }`;
-
   return (
     <>
-      <h1 className="mb-2rem">Its navbar</h1>
+      <h1 className="mb-2rem text-4xl font-extrabold tracking-tight">
+        Its navbar
+      </h1>
       <div className="none">
         <Code language="shell" title="App.tsx">
           {/* {`<div className="bg-red"></div>`} */}
@@ -38,7 +19,7 @@ const App: React.FC = () => {
         </Code>
       </div>
 
-      <main className="h-mn-100vh position-relative">
+      <main className=" position-relative w-mx-1440px mv-0 mh-auto">
         <Routes>
           <Route
             path="/"
@@ -56,7 +37,7 @@ const App: React.FC = () => {
           <Route path="*" element={<h1>Not Found!</h1>} />
         </Routes>
       </main>
-      <h1 className="mt-auto">Its Footer</h1>
+      <Footer />
     </>
   );
 };
