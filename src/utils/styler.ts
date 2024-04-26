@@ -1,4 +1,4 @@
-import tenoxui, { defineProps, makeStyles } from "tenoxui";
+import tenoxui, { defineProps, makeStyles, applyHovers } from "tenoxui";
 import { styles } from "./style";
 
 export function styler() {
@@ -20,6 +20,13 @@ export function styler() {
    * tenoxui function if define utility classes (optional)
    */
   makeStyles(styles);
+  applyHovers({
+    ".hover\\:text-slate-gray": [
+      "tc-[neutral-800]",
+      "tc-[neutral-900]",
+      "tr-prop-color tr-time-0.3s tr-timing-ease",
+    ],
+  });
   // init tenoxui function to handle all styles
   tenoxui();
 }
