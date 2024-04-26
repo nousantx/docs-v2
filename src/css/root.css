@@ -2,6 +2,9 @@
 
 :root {
   --message: "Ayo sholat!";
+  --flex-start: flex-start;
+  --sb: space-between;
+  --lg-gap: 5rem;
   --tx_fs: flex-start;
   --tx_fe: flex-end;
   --tx_sb: space-between;
@@ -17,39 +20,73 @@
   list-style: none;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
-}
-
-.docs-sidebar {
-  grid-column: 1 / span 3; /* Sidebar takes 3 columns */
-}
-
-.main-content {
-  grid-column: 4 / span 6; /* Main content takes 6 columns */
-}
-
-@media screen and (max-width: 992px) {
-  .grid-container {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Change to single column layout on smaller screens */
-  }
-
-  .docs-sidebar {
-    display: none; /* Hide sidebar on smaller screens */
-  }
-
-  .main-content {
-    grid-column: 1 / span 12; /* Main content takes full width on smaller screens */
+/* min-sm */
+@media (min-width: 640px) {
+  :root {
+    --sm-w: 24rem;
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .on-this-page {
-    grid-column: 10 / span 3; /* On This Page section takes 3 columns, starting from the 10th column */
+/* max-sm */
+@media (max-width: 640px) {
+  :root {
+    --max-sm: column;
+    --sm-center: center;
   }
+}
+/* sm */
+@media (min-width: 640px) and (max-width: 767px) {
+}
+/* min-md */
+@media (min-width: 768px) {
+  :root {
+    --min-md\:none: none;
+    --docs-layout: flex;
+    --docs-position: unset;
+    --docs-sidebar-toggle: none;
+  }
+}
+/* max-md */
+@media (max-width: 768px) {
+  :root {
+    --max-md\:none: none;
+    --docs-navigation: none;
+    --docs-position: fixed;
+    --docs-top: 0;
+  }
+}
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+/* min-lg */
+@media (min-width: 1024px) {
+  :root {
+    --lg-gap: 2.5rem;
+  }
+}
+/* max-lg */
+@media (max-width: 1024px) {
+  :root {
+    --max-lg: column;
+  }
+}
+/* lg */
+@media (min-width: 1024px) and (max-width: 1279px) {
+}
+/* min-xl */
+@media (min-width: 1280px) {
+}
+/* max-xl */
+@media (max-width: 1280px) {
+}
+/* xl */
+@media (min-width: 1280px) and (max-width: 1545px) {
+}
+/* min2xl */
+@media (min-width: 1546px) {
+}
+/* max-2xl */
+@media (max-width: 1546px) {
+}
+/* 2xl */
+@media (min-width: 1546px) {
 }
