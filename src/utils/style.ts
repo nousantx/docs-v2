@@ -22,7 +22,7 @@ export const styles: Styles = {
   "a.breadcrumb-link": "tc-[neutral-700] td-li-none",
   "a.breadcrumb-link.last.active":
     "tc-[neutral-900] td-li-underline td-c-[accent-500]",
-  ".btn": "bg-none bdr-none tc-#fafafa cursor-pointer fw-500",
+  ".btn": "bg-none bdr-none tc-[neutral-900] cursor-pointer fw-500",
   ".flex-1": "fx-grow-1 fx-shrink-1 fx-basis-0%",
   ".center": "flex-parent-center",
   ".space > * + *": "ml-1rem",
