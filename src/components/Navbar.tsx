@@ -14,8 +14,9 @@ const Navbar: React.FC = () => {
     <nav className="shadow-md">
       <Link to="/">
         <header>
-          <p className="flex-center text-base tc-[neutral-900] gap-6px">
-            <span className="font-medium">TenoxUI</span>
+          <p className="flex-center text-base tc-[neutral-900] gap-6px font-medium">
+            tenoxUI <span className="tc-[neutral-500]">/</span>{" "}
+            <span className="tc-[accent-500]">CSS</span>
           </p>
         </header>
       </Link>

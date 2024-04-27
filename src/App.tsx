@@ -4,22 +4,18 @@ import Documentation from "./pages/Documentation";
 import { useStyles } from "./hooks/useStyles";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import Home from "./pages/Home.tsx"
 const App: React.FC = () => {
   useStyles();
   return (
     <>
       <Navbar />
-      <main className=" position-relative w-mx-1440px mt-4rem mh-auto">
+      <main className="position-relative w-mx-1440px mv-0 mh-auto">
         <Routes>
           <Route
             path="/"
             element={
-              <>
-                <h1>This is homepage</h1>
-                <Link to="/docs">Docs</Link>
-                <Link to="/docs/get-started">Get Started</Link>
-              </>
+              <Home/>
             }
           />
           <Route path="/docs/*" element={<Documentation />} />

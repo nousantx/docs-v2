@@ -18,7 +18,7 @@ const Documentation: React.FC = () => {
     const mainContent = document.querySelector(".main-content");
     if (!mainContent) return;
     const headingTags = mainContent.querySelectorAll(
-      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]",
     );
     const extractedHeadings = Array.from(headingTags).map((heading) => ({
       text: (heading as HTMLElement).innerText, // Type assertion to HTMLElement
@@ -64,7 +64,7 @@ const Documentation: React.FC = () => {
     <>
       <div className="d-[docs-layout]">
         <DocsSidebar />
-        <article className="main-content fx-70% h-mn-100vh">
+        <article className="main-content fx-70% h-mn-100vh pt-4rem">
           <div className="ph-2rem pt-2rem">
             <Breadcrumbs />
             <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
@@ -102,7 +102,7 @@ const Documentation: React.FC = () => {
                     path={`${routeGroup.slug}${route.slug}`}
                     element={<route.element />}
                   />
-                ))
+                )),
               )}
             </Route>
           </Routes>
