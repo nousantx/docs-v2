@@ -3,23 +3,18 @@ import { useStyles } from "../hooks/useStyles";
 const Footer = () => {
   useStyles();
   return (
-    <footer className="w-mx-1440px mv-0 mh-auto p-2rem pb-4rem bg-[neutral-200]">
+    <footer className="w-mx-1440px mv-0 mh-auto p-2rem pb-4rem bg-[neutral-100] shadow-xl">
       <div className="flex jc-[sb] ai-[flex-start] gap-5rem flex-wrap fd-[max-lg]">
         <div className="flex fd-column ai-[flex-start]">
           <a href="/" className="flex center gap-4px">
-            <img
-              src="https://tenoxui.web.app/img/tenoxui.svg"
-              alt="logo"
-              width="40"
-              className="m-0px none"
-            />
-            <h2 className="tc-[accent-500] fw-400">
-              NOuSan<span className="fw-300 tc-[neutral-900]">.tx</span>
+            <h2 className="tc-[accent-500] text-2xl font-semibold tracking-tight">
+              NOuSan<span className="font-medium tc-[neutral-900]">.tx</span>
             </h2>
           </a>
           <p className="mt-1.5rem tc-[neutral-800] lh-1.75rem tc-[neutral-900] w-mx-[sm-w]">
-            Best words is always Lorem ipsum dolor sit amet. And don't forget to
-            try TenoxUI CSS Framework, It's Fast! Dan jangan lupa sholat!
+            Lorem ipsum dolor sit amet is always the best words. And don't
+            forget to try TenoxUI CSS Framework, It's Fast! Dan jangan lupa
+            sholat!
           </p>
           <div className="flex ai-center gap-1.25rem mt-2rem">
             <a
@@ -159,12 +154,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <div className="flex jc-[sb] tc-[neutral-900] mt-6rem fd-[max-sm] ai-[sm-center]">
         <div className="flex flex-1 jc-[flex-start] ai-center gap-0.5rem">
           <p>&copy; 2024 NOuSantx. All Rights Reserved.</p>
         </div>
-        <a className="cursor-pointer" href="https://tenoxui.web.app">
+        <a
+          className="cursor-pointer tc-[neutral-800] hover:text-slate-gray"
+          href="https://tenoxui.web.app"
+        >
           Built with TenoxUI
         </a>
       </div>

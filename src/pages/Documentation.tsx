@@ -1,30 +1,86 @@
-import { Routes, Route, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
-// import DocsSidebar from "../components/DocsSidebar";
 import { Routes as DocsRoutes } from "../docs";
 import GetStarted from "../docs/get-started";
 import DocsSidebar from "../components/DocsSidebar";
 
+interface Heading {
+  text: string;
+  id: string;
+  level: number;
+}
+
 const Documentation: React.FC = () => {
+  const [headings, setHeadings] = useState<Heading[]>([]);
+  const location = useLocation();
+  const extractHeadingsWithIds = () => {
+    const mainContent = document.querySelector(".main-content");
+    if (!mainContent) return;
+    const headingTags = mainContent.querySelectorAll(
+      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+    );
+    const extractedHeadings = Array.from(headingTags).map((heading) => ({
+      text: (heading as HTMLElement).innerText, // Type assertion to HTMLElement
+      id: heading.id,
+      level: parseInt((heading as HTMLElement).tagName.charAt(1)), // Type assertion to HTMLElement
+    }));
+    setHeadings(extractedHeadings);
+  };
+
+  useEffect(() => {
+    extractHeadingsWithIds();
+  }, [location]);
+
+  // Rendering logic for the "On this page" section
+  const renderOnThisPageSection = () => {
+    if (headings.length === 0) {
+      return (
+        <>
+          <p className="text-lg font-medium tc-[neutral-800]">
+            Nothing to show
+          </p>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <p className="text-lg font-medium tc-[neutral-800]">On this page</p>
+          <ul className="border bw-left-2px bc-[neutral-400] pl-1rem pv-8px mt-0.5rem">
+            {headings.map((heading, index) => (
+              <li key={index} className="text-base font-light">
+                <Link to={`#${heading.id}`} className="tc-[neutral-700]">
+                  {heading.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
+  };
+
   return (
     <>
-      <div className="d-[docs-layout] flex-wrap">
+      <div className="d-[docs-layout]">
         <DocsSidebar />
-        <section className="main-content fx-70%">
-          <div className="ph-2rem">
+        <article className="main-content fx-70% h-mn-100vh">
+          <div className="ph-2rem pt-2rem">
             <Breadcrumbs />
+            <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+              {renderOnThisPageSection()}
+            </div>
           </div>
           <Routes>
             <Route path="/">
               <Route path="get-started" element={<GetStarted />} />
-              {/* Render routes for each category */}
               {DocsRoutes.map((routeGroup) => (
                 <Route
                   key={routeGroup.slug}
                   path={`${routeGroup.slug}`}
                   element={
                     <>
-                      <h1>{routeGroup.name}</h1>
+                      <h1>{routeGroup.name}</h1>m
                       <ul>
                         {routeGroup.routes.map((route) => (
                           <li key={route.slug}>
@@ -39,7 +95,6 @@ const Documentation: React.FC = () => {
                   }
                 />
               ))}
-              {/* Individual Documentation Pages */}
               {DocsRoutes.map((routeGroup) =>
                 routeGroup.routes.map((route) => (
                   <Route
@@ -51,11 +106,9 @@ const Documentation: React.FC = () => {
               )}
             </Route>
           </Routes>
-        </section>
-        <div className="fx-15% on-this-page bg-none max-md-none">
-          <h4 className="text-xl font-semibold tracking-tight">
-            On this page
-          </h4>
+        </article>
+        <div className="fx-15% h-100vh max-lg-none position-[docs-position] t-4rem pt-2rem">
+          {renderOnThisPageSection()}
         </div>
       </div>
     </>

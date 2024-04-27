@@ -7,6 +7,12 @@ export const styles: Styles = {
   body: "family-[font-body] bg-[neutral-100] tc-[neutral-900]",
   p: "family-[font-body] tc-[neutral-800]",
   code: "family-[font-mono]",
+  nav: {
+    "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-999",
+    ul: "d-flex flex-parent-center",
+    "ul li": "d-flex flex-parent-center tc-[neutral-800] cursor-pointer",
+    a: "tc-inherit",
+  },
   ".flex": "d-flex",
   ".w-full": "w-100%",
   ".flex-center": "d-flex flex-parent-center",
@@ -17,11 +23,13 @@ export const styles: Styles = {
   "a.breadcrumb-link.last.active":
     "tc-[neutral-900] td-li-underline td-c-[accent-500]",
   ".btn": "bg-none bdr-none tc-#fafafa cursor-pointer fw-500",
-  a: "tc-inherit",
   ".flex-1": "fx-grow-1 fx-shrink-1 fx-basis-0%",
   ".center": "flex-parent-center",
   ".space > * + *": "ml-1rem",
-  ".footer-link": "mt-0.75rem  tc-[neutral-800]",
+  ".footer-link": {
+    "": "mt-0.75rem  tc-[neutral-800]",
+    a: "tc-inherit",
+  },
   // important selector must be last
   ".text-xs": "fs-0.75rem lh-1rem",
   ".text-sm": "fs-0.875rem lh-1.25rem",
@@ -74,8 +82,19 @@ export const styles: Styles = {
   ".absolute": "position-absolute",
   ".relative": "position-relative",
   ".sticky": "position-sticky",
+  // box shadow
+  ".shadow": "shadow-[tx__shadow]",
+  ".shadow-md": "shadow-[tx__shadow-md]",
+  ".shadow-lg": "shadow-[tx__shadow-lg]",
+  ".shadow-xl": "shadow-[tx__shadow-xl]",
+  ".shadow-2xl": "shadow-[tx__shadow-2xl]",
+  ".shadow-inner": "shadow-[tx__shadow-inner]",
+  ".shadow-none": "shadow-[tx__shadow-none]",
   ".max-md-none": "d-[max-md\\:none]",
+  ".max-lg-none": "d-[max-lg\\:none]",
+  ".min-lg-none": "d-[min-lg\\:none]",
   ".min-md-none": "d-[min-md\\:none]",
   ".none": "d-none",
+  ".border": "bs-solid bw-0",
   ".text-primary, .text-primary-500": "tc-[accent-500]",
 };

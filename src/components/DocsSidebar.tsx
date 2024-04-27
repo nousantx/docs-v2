@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useStyles } from "../hooks/useStyles";
 import { ReactNode, useState } from "react";
 
@@ -27,7 +27,7 @@ const DocsSidebar: React.FC = () => {
     return null;
   }
 
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const toggleSidebar = () => {
     setSidebar(!sidebar);
   };
@@ -35,27 +35,34 @@ const DocsSidebar: React.FC = () => {
   useStyles(sidebar);
 
   return (
-    <aside className="fx-15% relative">
+    <aside className="fx-15% relative z-1000">
       <ToggleButton
         toggleSidebar={toggleSidebar}
-        className="btn d-[docs-sidebar-toggle] flex-center min-md-none"
+        className="btn d-[docs-sidebar-toggle] flex-center min-md-none position-fixed t-0 pv-1rem pl-2rem bg-[neutral-100]"
       >
-        <span className="tc-red ms-round">dashboard</span>
+        <p className="flex-center text-base tc-[neutral-900] gap-6px">
+          <span className="ms-sharp text-md">sort</span>
+          <span className="font-medium">TenoxUI</span>
+        </p>
       </ToggleButton>
       <div
-        className={`bg-[neutral-100] bg-red p-1rem position-[docs-position] t-[docs-top] l-${sidebarPosition}`}
+        className={`bg-[neutral-100] ph-2rem pv-1rem position-[docs-position] t-0 mt-5px l-${sidebarPosition} h-100vh pt-2rem`}
       >
-        <div className="flex-center relative min-md-none">
+        <div className="flex flex-center relative gap-2rem">
+          <Link to="/" className="min-md-none">
+            <header className="flex ai-center">
+              <p className="flex-center text-base">
+                <span className="font-medium">TenoxUI</span>
+              </p>
+            </header>
+          </Link>
           <ToggleButton
             toggleSidebar={toggleSidebar}
-            className="btn flex-center bg-none ml-auto d-[]"
+            className="btn min-md-none"
           >
             <span className="tc-[neutral-900] ms-round text-sm">close</span>
           </ToggleButton>
         </div>
-        <h3 className="text-2xl font-semibold tracking-tight min-md-none">
-          TenoxUI v0.7
-        </h3>
 
         {/* Button to toggle sidebar */}
         <ul>

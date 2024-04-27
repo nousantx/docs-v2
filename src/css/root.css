@@ -10,6 +10,17 @@
   --tx_sb: space-between;
   --font-body: "gabarito", sans-serif;
   --font-mono: "fira code", monospace;
+  --min-lg\:none: block;
+  --tx__shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tx__shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tx__shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tx__shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tx__shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tx__shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --tx__shadow-none: 0 0 #0000;
 }
 
 * {
@@ -41,7 +52,7 @@
   :root {
     --min-md\:none: none;
     --docs-layout: flex;
-    --docs-position: unset;
+    --docs-position: sticky;
     --docs-sidebar-toggle: none;
   }
 }
@@ -61,6 +72,16 @@
 @media (min-width: 1024px) {
   :root {
     --lg-gap: 2.5rem;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --max-lg\:none: none;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --min-lg\:none: none;
   }
 }
 /* max-lg */
@@ -89,4 +110,35 @@
 }
 /* 2xl */
 @media (min-width: 1546px) {
+}
+html {
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+html.darkmode {
+  --neutral-950: rgb(250 250 250);
+  --neutral-900: rgb(245 245 245);
+  --neutral-800: rgb(229 229 229);
+  --neutral-700: rgb(212 212 212);
+  --neutral-600: rgb(163 163 163);
+  --neutral-500: rgb(115 115 115);
+  --neutral-400: rgb(82 82 82);
+  --neutral-300: rgb(64 64 64);
+  --neutral-200: rgb(38 38 38);
+  --neutral-100: rgb(23 23 23);
+  --neutral-50: rgb(10 10 10);
+  --accent-100: #f9fff2;
+  --accent-200: #e8ffcb;
+  --accent-300: #dbfea4;
+  --accent-400: #d1fb7b;
+  --accent-500: #caf553;
+  --accent-600: #a2c12b;
+  --accent-700: #7c8e17;
+  --accent-800: #535a0d;
+  --accent-900: #252605;
+  --info-200-opa: #b9ddff20;
+  --danger-200-opa: #feb8b820;
+  --success-200-opa: #d6fec120;
+  --warning-200-opa: #fff3be20;
 }

@@ -7,6 +7,7 @@ export function styler() {
     d: "display",
     bdr: "border",
     bc: "borderColor",
+    sc: "scale",
     scroll: "scrollBehavior",
     // text-decoration
     "td-li": "textDecorationLine",
@@ -14,6 +15,7 @@ export function styler() {
     "td-s": "textDecorationStyle",
     "td-t": "textDecorationThickness",
     "td-o": "textDecorationOffset",
+    "shadow": "boxShadow",
   });
   /**
    * apply custom styles. Note: always use makeStyles after initiate -
@@ -21,6 +23,11 @@ export function styler() {
    */
   makeStyles(styles);
   applyHovers({
+    "nav ul li": [
+      "tc-[neutral-800]",
+      "tc-[accent-500]",
+      "tr-prop-color tr-time-0.3s tr-timing-ease",
+    ],
     ".hover\\:text-slate-gray": [
       "tc-[neutral-800]",
       "tc-[neutral-900]",
