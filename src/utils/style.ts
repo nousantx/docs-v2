@@ -5,7 +5,7 @@ type Styles = Record<string, string | Record<string, string>>;
 export const styles: Styles = {
   html: "scroll-smooth",
   body: "family-[font-body] bg-[neutral-100] tc-[neutral-900]",
-  p: "family-[font-body] tc-[neutral-800]",
+  p: "family-[font-body] tc-[neutral-800] lh-1.75rem",
   code: "family-[font-mono]",
   nav: {
     "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-999",
@@ -13,6 +13,13 @@ export const styles: Styles = {
     "ul li": "d-flex flex-parent-center tc-[neutral-800] cursor-pointer",
     a: "tc-inherit",
   },
+  // heading
+  h1: "fs-2.25rem fw-800 ls--0.025em",
+  h2: "fs-1.875rem",
+  h3: "fs-1.5rem",
+  h4: "fs-1.25rem",
+  "h2,h3,h4": "fw-600 ls--0.025em",
+
   ".flex": "d-flex",
   ".w-full": "w-100%",
   ".flex-center": "d-flex flex-parent-center",
@@ -90,6 +97,7 @@ export const styles: Styles = {
   ".shadow-2xl": "shadow-[tx__shadow-2xl]",
   ".shadow-inner": "shadow-[tx__shadow-inner]",
   ".shadow-none": "shadow-[tx__shadow-none]",
+  ".italic": "font-s-italic",
   ".max-md-none": "d-[max-md\\:none]",
   ".max-lg-none": "d-[max-lg\\:none]",
   ".min-lg-none": "d-[min-lg\\:none]",

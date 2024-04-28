@@ -6,6 +6,7 @@ import GetStarted from "../docs/get-started";
 import DocsSidebar from "../components/DocsSidebar";
 import CLI from "./CLI";
 import Pages from ".";
+import Meta from "../components/Helmet";
 
 interface Heading {
   text: string;
@@ -67,16 +68,33 @@ const Documentation: React.FC = () => {
       <div className="d-[docs-layout]">
         <DocsSidebar />
         <article className="main-content fx-70% h-mn-100vh pt-4rem">
-          <div className="ph-2rem pt-2rem">
-            <Breadcrumbs />
-            <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
-              {renderOnThisPageSection()}
-            </div>
-          </div>
           <Routes>
             <Route path="/">
-              <Route path="get-started" element={<GetStarted />} />
-              <Route path="/cli" element={<CLI />} />
+              {/* <Route path="get-started" element={<GetStarted />} /> */}
+              {/* <Route path="/cli" element={<CLI />} /> */}
+              {Pages.map((page, index) => (
+                <Route
+                  key={index}
+                  path={page.slug}
+                  element={
+                    <>
+                      <Meta
+                        title={page.title || "Docs"}
+                        desc={
+                          page.desc || "Explore tenoxui documentation page."
+                        }
+                      />
+                      <div className="ph-2rem pt-2rem">
+                        <Breadcrumbs pageTitle={page.title} />
+                        <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                          {renderOnThisPageSection()}
+                        </div>
+                      </div>
+                      {page.element}
+                    </>
+                  }
+                />
+              ))}
               {DocsRoutes.map((routeGroup) => (
                 <Route
                   key={routeGroup.slug}

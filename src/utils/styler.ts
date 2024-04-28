@@ -10,6 +10,7 @@ export function styler() {
     sc: "scale",
     scroll: "scrollBehavior",
     "back-c": "backgroundColor",
+    "font-s": "fontStyle",
     // text-decoration
     "td-li": "textDecorationLine",
     "td-c": "textDecorationColor",

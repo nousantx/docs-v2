@@ -82,7 +82,7 @@ export const useStyles = (...hooks: any[]) => {
           >{`import tenoxui from "tenoxui";`}</Code>
         </Tip>
         <DocLink
-          prev="/home"
+          prev="/"
           prevIcon="home"
           prevTitle="Overview"
           next="/docs/cli"

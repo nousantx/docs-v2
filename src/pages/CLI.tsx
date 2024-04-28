@@ -7,8 +7,7 @@ import { TabItem, Tabs } from "../components/Tabs";
 const CLI = () => {
   return (
     <>
-      <Section title="CLI">
-        <Breadcrumbs pageTitle="tenoxui CLI" />
+      <Section title="CLI" className="pt-2rem">
         <Tabs>
           <TabItem
             title={
@@ -18,7 +17,7 @@ const CLI = () => {
             }
           >
             <Code lang="javascript" codeOnly>
-              {`console.log("TenoxUI Here")`}
+              {`console.log("NOuSantx Was Here!")`}
             </Code>
           </TabItem>
           <TabItem
@@ -44,7 +43,14 @@ const CLI = () => {
             <button className="btn bg-primary-500 mt-1rem">More</button>
           </TabItem>
         </Tabs>
-        <DocLink prev="/home" />
+        <DocLink
+          prev="/"
+          prevIcon="home"
+          prevTitle="Home"
+          next="/tenox"
+          nextIcon="dashboard"
+          nextTitle="Semua Tenox"
+        />
       </Section>
     </>
   );

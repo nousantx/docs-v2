@@ -69,7 +69,9 @@ const DocsSidebar: React.FC = () => {
           className="btn d-[docs-sidebar-toggle] flex-center min-md-none position-fixed t-0 pv-1rem pl-2rem bg-[neutral-100]"
         >
           <p className="flex-center text-base tc-[neutral-900] gap-6px">
-            <span className="ms-sharp text-md">sort</span>
+            <span className="btn flex-center box-30px border bw-1px bc-[neutral-400] br-4px mr-4px">
+              <span className="ms-sharp text-base">sort</span>
+            </span>
             tenoxUI <span className="tc-[neutral-500]">/</span>{" "}
             <span className="tc-[accent-500]">CSS</span>
           </p>

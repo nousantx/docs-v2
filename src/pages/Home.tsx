@@ -1,4 +1,5 @@
 import DocLink from "../components/DocsNavigation";
+import Meta from "../components/Helmet";
 import Section from "../components/Section";
 import { useStyles } from "../hooks/useStyles";
 import { Link } from "react-router-dom";
@@ -6,7 +7,8 @@ function Home() {
   useStyles();
 
   return (
-    <Section title="Home" className="p-0 ph-2rem">
+    <Section className="ph-2rem">
+      <Meta title="Home" />
       <article className="flex-center fd-column h-100vh">
         <header className="flex-center ta-center fd-column">
           <div className="box-4rem relative flex-center mb-1rem">
@@ -43,7 +45,7 @@ function Home() {
         </div>
       </article>
       <DocLink
-        next="/installation"
+        next="/docs/installation"
         nextIcon="download"
         edit="https://github.com/nousantx/docs-v2/tree/main/src/pages/Home.tsx"
       />

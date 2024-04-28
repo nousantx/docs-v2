@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useStyles } from "../hooks/useStyles";
 
@@ -23,9 +23,13 @@ const DocLink: React.FC<{
 }) => {
   const location = useLocation();
   const githubEditLink =
-    edit ||
+    `https://github.com/nousantx/docs-v2/tree/main/src${edit}` ||
     `https://github.com/nousantx/docs-v2/tree/main/src${location.pathname}.tsx`;
   useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const generateLinkTitle = (link: string) => {
     const segments = link.split("/");
