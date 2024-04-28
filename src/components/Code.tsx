@@ -30,11 +30,11 @@ const Code: React.FC<Code> = ({
     <div className={`w-full relative ${className}`}>
       {/* {copy && ( */}
       <div
-        className={`fixed top-4rem right--100% bg-[neutral-100] tc-[neutral-900] ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-4px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md ${
+        className={`fixed top-5.5rem right--100% bg-[neutral-100] tc-[neutral-900] ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-8px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md ${
           copy ? "opa-1 right-1rem" : "opa-0 right--100%"
         }`}
       >
-        <span className="ms-round tc-[green-500]">done_all</span>
+        <span className="ms-sharp tc-[accent-500] text-lg">inventory</span>
         Code copied successfully!
       </div>
       {/* )} */}
@@ -52,7 +52,7 @@ const Code: React.FC<Code> = ({
           <p className="text-sm font-medium">{title}</p>
           {copy ? (
             <button className="btn flex-center gap-6px tc-[neutral-800]">
-              <span className="ms-round fs-16px">done</span>{" "}
+              <span className="ms-sharp fs-16px">done</span>{" "}
               <p className="text-sm font-medium">Copied</p>
             </button>
           ) : (
@@ -76,7 +76,7 @@ const Code: React.FC<Code> = ({
                 }, 3000);
               }}
             >
-              <span className="ms-round fs-16px">content_copy</span>{" "}
+              <span className="ms-sharp fs-16px">content_copy</span>{" "}
               <p className="text-sm font-medium">Copy</p>
             </button>
           )}
