@@ -9,6 +9,7 @@ export function styler() {
     bc: "borderColor",
     sc: "scale",
     scroll: "scrollBehavior",
+    "back-c": "backgroundColor",
     // text-decoration
     "td-li": "textDecorationLine",
     "td-c": "textDecorationColor",

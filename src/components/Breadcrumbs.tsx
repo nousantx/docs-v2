@@ -9,7 +9,7 @@ const capitalizeFirstLetter = (str: string) => {
     .join(" ");
 };
 
-const Breadcrumbs: React.FC = () => {
+const Breadcrumbs: React.FC<{ pageTitle?: string }> = ({ pageTitle }) => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
   // applying hooks whenever the url changes
@@ -27,7 +27,10 @@ const Breadcrumbs: React.FC = () => {
         // last navlink will have last className
         // change the styles on /src/utils/style.ts
         const className = isLast ? "breadcrumb-link last" : "breadcrumb-link";
-        const displayName = capitalizeFirstLetter(name);
+        const displayName =
+          pageTitle && index === pathnames.length - 1
+            ? pageTitle
+            : capitalizeFirstLetter(name);
         return (
           <React.Fragment key={name}>
             <NavLink className={className} to={routeTo}>

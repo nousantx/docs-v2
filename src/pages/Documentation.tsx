@@ -4,6 +4,8 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { Routes as DocsRoutes } from "../docs";
 import GetStarted from "../docs/get-started";
 import DocsSidebar from "../components/DocsSidebar";
+import CLI from "./CLI";
+import Pages from ".";
 
 interface Heading {
   text: string;
@@ -18,7 +20,7 @@ const Documentation: React.FC = () => {
     const mainContent = document.querySelector(".main-content");
     if (!mainContent) return;
     const headingTags = mainContent.querySelectorAll(
-      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]",
+      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
     );
     const extractedHeadings = Array.from(headingTags).map((heading) => ({
       text: (heading as HTMLElement).innerText, // Type assertion to HTMLElement
@@ -74,6 +76,7 @@ const Documentation: React.FC = () => {
           <Routes>
             <Route path="/">
               <Route path="get-started" element={<GetStarted />} />
+              <Route path="/cli" element={<CLI />} />
               {DocsRoutes.map((routeGroup) => (
                 <Route
                   key={routeGroup.slug}
@@ -102,7 +105,7 @@ const Documentation: React.FC = () => {
                     path={`${routeGroup.slug}${route.slug}`}
                     element={<route.element />}
                   />
-                )),
+                ))
               )}
             </Route>
           </Routes>
