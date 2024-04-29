@@ -27,6 +27,8 @@ const DocLink: React.FC<{
     `https://github.com/nousantx/docs-v2/tree/main/src${location.pathname}.tsx`;
   useStyles();
 
+  // const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);

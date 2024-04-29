@@ -25,14 +25,14 @@ const GetStarted = () => {
         >
           Installation
         </h2>
-        <p className="text-md font-light mt-6px mb-1rem">
+        <p className="text-lg font-light mt-6px mb-1rem">
           Let's learn about tenoxui css framework. Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Ex, illum.
         </p>
         <Code title="NPM" lang="bash">
           {`npm i tenoxui --save-dev`}
         </Code>
-        <p className="text-md leading-7 mv-8px pl-1rem">Or</p>
+        <p className="text-lg leading-7 mv-8px pl-1rem">Or</p>
         <Code title="Yarn" lang="bash">
           {`yarn add tenoxui -D`}
         </Code>
@@ -58,7 +58,12 @@ export function styler() {
 }
 `}
           </Code>
-          <Code lang="typescript" className="mt-1rem" title="useStyles.jsx">
+          <Code
+            lang="typescript"
+            className="mt-1rem"
+            title="useStyles.jsx"
+            showNumber
+          >
             {`import { useLayoutEffect } from "react";
 import { styler } from "../utils/styler";
 
@@ -66,8 +71,7 @@ export const useStyles = (...hooks: any[]) => {
   useLayoutEffect(() => {
     styler();
   }, [hooks]);
-};
-`}
+};`}
           </Code>
         </Tip>
         <Tip className="mt-2rem" variant="tip" title="Just Tips" id="dos">

@@ -1,11 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-
-import {
-  // docco,
-  // atomOneLight,
-  atomOneDark,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useStyles } from "../hooks/useStyles";
 
 interface Code {
@@ -13,6 +8,7 @@ interface Code {
   lang: string;
   className?: string;
   codeOnly?: boolean;
+  showNumber?: boolean;
   children: string | ReactNode;
 }
 
@@ -21,6 +17,7 @@ const Code: React.FC<Code> = ({
   lang,
   children,
   codeOnly,
+  showNumber,
   className,
 }) => {
   const [copy, setCopy] = useState(false);
@@ -49,7 +46,10 @@ const Code: React.FC<Code> = ({
         <div
           className={`w-full flex space-between items-center bg-[neutral-200] p-10px radius-top-4px`}
         >
-          <p className="text-sm font-medium">{title}</p>
+          <p className="text-sm font-medium flex-center gap-6px">
+            <span className="ms-sharp text-base tc-[accent-500]">draft</span>
+            {title}
+          </p>
           {copy ? (
             <button className="btn flex-center gap-6px tc-[neutral-800]">
               <span className="ms-sharp fs-16px">done</span>{" "}
@@ -84,6 +84,7 @@ const Code: React.FC<Code> = ({
       ) : null}
 
       <SyntaxHighlighter
+        showLineNumbers={showNumber}
         language={lang}
         style={atomOneDark}
         className={`p-1rem bg-#1d1d1d relative ${

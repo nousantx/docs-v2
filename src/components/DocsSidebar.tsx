@@ -62,7 +62,7 @@ const DocsSidebar: React.FC = () => {
       )}
       <aside
         id="docs-sidebar"
-        className="w-[aside-sm-full] relative z-1000 bg-blue flex"
+        className="w-[aside-sm-full] relative z-1000 flex"
       >
         <ToggleButton
           toggleSidebar={toggleSidebar}
@@ -70,7 +70,7 @@ const DocsSidebar: React.FC = () => {
         >
           <p className="flex-center text-base tc-[neutral-900] gap-6px">
             <span className="btn flex-center box-30px border bw-1px bc-[neutral-400] br-4px mr-4px">
-              <span className="ms-sharp text-base">sort</span>
+              <span className="ms-sharp text-md">sort</span>
             </span>
             tenoxUI <span className="tc-[neutral-500]">/</span>{" "}
             <span className="tc-[accent-500]">CSS</span>
@@ -78,7 +78,7 @@ const DocsSidebar: React.FC = () => {
         </ToggleButton>
 
         <div
-          className={`bg-[neutral-100] ph-2rem pv-1rem position-[docs-position] t-0 l-${sidebarPosition} h-100vh pt-1rem`}
+          className={`bg-[neutral-100] ph-2rem pv-1rem position-[docs-position] t-0 l-${sidebarPosition} h-100vh pt-1rem tr-time-0.3s`}
         >
           <div className="flex flex-center relative jc-[flex-start] gap-2rem mb-3rem">
             <Link to="/" className="min-md-none">
@@ -91,7 +91,7 @@ const DocsSidebar: React.FC = () => {
             </Link>
             <ToggleButton
               toggleSidebar={toggleSidebar}
-              className="btn min-md-none"
+              className="btn flex-center box-30px border bw-1px bc-[neutral-400] br-4px min-md-none"
             >
               <span className="tc-[neutral-900] ms-round text-sm">close</span>
             </ToggleButton>

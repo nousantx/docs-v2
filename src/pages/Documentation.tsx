@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Routes as DocsRoutes } from "../docs";
@@ -19,7 +19,7 @@ const Documentation: React.FC = () => {
     const mainContent = document.querySelector(".main-content");
     if (!mainContent) return;
     const headingTags = mainContent.querySelectorAll(
-      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+      "h1[id], h2[id], h3[id], h4[id], p[id]"
     );
     const extractedHeadings = Array.from(headingTags).map((heading) => ({
       text: (heading as HTMLElement).innerText, // Type assertion to HTMLElement
@@ -29,7 +29,7 @@ const Documentation: React.FC = () => {
     setHeadings(extractedHeadings);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     extractHeadingsWithIds();
   }, [location]);
 
@@ -50,9 +50,9 @@ const Documentation: React.FC = () => {
           <ul className="border bw-left-2px bc-[neutral-400] pl-1rem pv-8px mt-0.5rem">
             {headings.map((heading, index) => (
               <li key={index} className="text-base font-light">
-                <Link to={`#${heading.id}`} className="tc-[neutral-700]">
+                <a href={`#${heading.id}`} className="tc-[neutral-700]">
                   {heading.text}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
