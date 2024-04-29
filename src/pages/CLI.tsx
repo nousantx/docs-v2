@@ -1,4 +1,3 @@
-import Breadcrumbs from "../components/Breadcrumbs";
 import Code from "../components/Code";
 import DocLink from "../components/DocsNavigation";
 import Section from "../components/Section";
@@ -7,7 +6,7 @@ import { TabItem, Tabs } from "../components/Tabs";
 const CLI = () => {
   return (
     <>
-      <Section title="CLI" className="pt-2rem">
+      <Section className="pt-2rem">
         <Tabs>
           <TabItem
             title={

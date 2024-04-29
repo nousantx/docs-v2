@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Routes as DocsRoutes } from "../docs";
-import GetStarted from "../docs/get-started";
 import DocsSidebar from "../components/DocsSidebar";
-import CLI from "./CLI";
 import Pages from ".";
 import Meta from "../components/Helmet";
 
