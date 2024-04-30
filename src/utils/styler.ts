@@ -18,6 +18,7 @@ export function styler() {
     "td-t": "textDecorationThickness",
     "td-o": "textDecorationOffset",
     shadow: "boxShadow",
+    isolation: "isolation",
   });
   /**
    * apply custom styles. Note: always use makeStyles after initiate -

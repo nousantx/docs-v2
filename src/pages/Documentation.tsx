@@ -3,8 +3,10 @@ import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Routes as DocsRoutes } from "../docs";
 import DocsSidebar from "../components/DocsSidebar";
-import Pages from ".";
 import Meta from "../components/Helmet";
+import { styler } from "../utils/styler";
+import Pages from ".";
+import Section from "../components/Section";
 
 interface Heading {
   text: string;
@@ -30,6 +32,7 @@ const Documentation: React.FC = () => {
   };
 
   useLayoutEffect(() => {
+    styler();
     extractHeadingsWithIds();
   }, [location]);
 
@@ -99,17 +102,39 @@ const Documentation: React.FC = () => {
                   path={`${routeGroup.slug}`}
                   element={
                     <>
-                      <h1>{routeGroup.name}</h1>m
-                      <ul>
-                        {routeGroup.routes.map((route) => (
-                          <li key={route.slug}>
-                            <Link to={`/docs${routeGroup.slug}${route.slug}`}>
-                              <h3>{route.name}</h3>
-                              <p>{route.desc}</p>
+                      <Meta title={routeGroup.name} desc={routeGroup.desc} />
+                      <Section className="pt-2rem">
+                        <Breadcrumbs />
+                        <h1>{routeGroup.name}</h1>
+                        <p className="mt-0">{routeGroup.desc}</p>
+                        <div className="w-full mt-1.5rem flex-wrap jc-center ai-stretch gap-1rem">
+                          {routeGroup.routes.map((route) => (
+                            <Link
+                              key={route.slug}
+                              to={`/docs${routeGroup.slug}${route.slug}`}
+                              className="fx-250px bg-[neutral-200] p-1.5rem br-4px tc-[neutral-900] flex-center gap-1rem shadow-md"
+                            >
+                              {/* <span className="ms-sharp text-xl tc-[accent-500]">
+                                {route.icon || "book"}
+                              </span> */}
+                              <header>
+                                <span className="ms-sharp text-3xl tc-[accent-500] mb-8px">
+                                  {route.icon || "book"}
+                                </span>
+                                <h2 id="route-group" className="text-lg">
+                                  {route.name}
+                                </h2>
+                                <p className="text-sm tc-[neutral-700]">
+                                  {route.desc}
+                                </p>
+                              </header>
+                              <span className="ms-sharp text-base tc-[accent-500] ml-auto">
+                                {/* chevron_right */}
+                              </span>
                             </Link>
-                          </li>
-                        ))}
-                      </ul>
+                          ))}
+                        </div>
+                      </Section>
                     </>
                   }
                 />

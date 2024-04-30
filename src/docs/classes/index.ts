@@ -1,7 +1,15 @@
+import { Route } from "../../types/docsTypes";
 import Flex from "./Flex";
 import Tenox from "./Tenox";
 
-export const Classes = [
+export const Classes: Route[] = [
+  {
+    name: "tenoxui/cli",
+    desc: "CLI Documentation.",
+    slug: "/suki",
+    icon: "terminal",
+    element: Flex,
+  },
   {
     name: "Flex Docs",
     desc: "Its flexbox documentation",
@@ -15,4 +23,3 @@ export const Classes = [
     element: Tenox,
   },
 ];
-

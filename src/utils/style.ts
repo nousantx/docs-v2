@@ -8,7 +8,7 @@ export const styles: Styles = {
   p: "family-[font-body] tc-[neutral-800] lh-1.75rem",
   code: "family-[font-mono]",
   nav: {
-    "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-999",
+    "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-998",
     ul: "d-flex flex-parent-center",
     "ul li": "d-flex flex-parent-center tc-[neutral-800] cursor-pointer",
     a: "tc-inherit",
@@ -103,6 +103,8 @@ export const styles: Styles = {
   ".min-lg-none": "d-[min-lg\\:none]",
   ".min-md-none": "d-[min-md\\:none]",
   ".none": "d-none",
+  ".text-nowrap": "white-space-nowrap",
+  ".isolate": "isolation-isolate",
   ".border": "bs-solid bw-0",
   ".text-primary, .text-primary-500": "tc-[accent-500]",
 };
