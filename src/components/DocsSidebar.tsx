@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-// import { useStyles } from "../hooks/useStyles";
 import { ReactNode } from "react";
 import { styler } from "../utils/styler";
 import SidebarLinks from "./SidebarLinks";
@@ -109,7 +108,7 @@ const DocsSidebar: React.FC = () => {
               </span>
               <p className="flex-center text-base tc-[neutral-900] gap-6px font-medium">
                 tenoxUI <span className="tc-[neutral-500]">/</span>{" "}
-                <span className="tc-[accent-500]">Tenox</span>
+                <span className="tc-[accent-500]">CSS</span>
               </p>
             </header>
           </Link>

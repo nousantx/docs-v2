@@ -7,6 +7,7 @@ import Meta from "../components/Helmet";
 import { styler } from "../utils/styler";
 import Pages from ".";
 import Section from "../components/Section";
+import Docs from "./Docs";
 
 interface Heading {
   text: string;
@@ -50,7 +51,7 @@ const Documentation: React.FC = () => {
       return (
         <>
           <p className="text-lg font-medium tc-[neutral-800]">On this page</p>
-          <ul className="border bw-left-2px bc-[neutral-400] pl-1rem pv-8px mt-0.5rem">
+          <ul className="border list-none bw-left-2px bc-[neutral-400] pl-1rem pv-8px mt-0.5rem">
             {headings.map((heading, index) => (
               <li key={index} className="text-base font-light">
                 <a href={`#${heading.id}`} className="tc-[neutral-700]">
@@ -72,7 +73,20 @@ const Documentation: React.FC = () => {
           <Routes>
             <Route path="/">
               {/* <Route path="get-started" element={<GetStarted />} /> */}
-              {/* <Route path="/cli" element={<CLI />} /> */}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <div className="ph-2rem pt-2rem">
+                      <Breadcrumbs />
+                      <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                        {renderOnThisPageSection()}
+                      </div>
+                    </div>
+                    <Docs />
+                  </>
+                }
+              />
               {Pages.map((page, index) => (
                 <Route
                   key={index}
@@ -87,9 +101,9 @@ const Documentation: React.FC = () => {
                       />
                       <div className="ph-2rem pt-2rem">
                         <Breadcrumbs pageTitle={page.title} />
-                        <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                        {/* <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
                           {renderOnThisPageSection()}
-                        </div>
+                        </div> */}
                       </div>
                       {page.element}
                     </>

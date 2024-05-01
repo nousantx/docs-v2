@@ -7,6 +7,10 @@ export const styles: Styles = {
   body: "family-[font-body] bg-[neutral-100] tc-[neutral-900]",
   p: "family-[font-body] tc-[neutral-800] lh-1.75rem",
   code: "family-[font-mono]",
+  a: "tc-[neutral-800]",
+  "p code, .code":
+    "family-[font-mono] tc-[neutral-900] bg-[neutral-200] ph-6px br-4px fw-500 fs-80%",
+  "p.text, .paragraph, .para": "fs-1rem lh-1.5rem ta-justify",
   nav: {
     "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-998",
     ul: "d-flex flex-parent-center",
@@ -97,7 +101,23 @@ export const styles: Styles = {
   ".shadow-2xl": "shadow-[tx__shadow-2xl]",
   ".shadow-inner": "shadow-[tx__shadow-inner]",
   ".shadow-none": "shadow-[tx__shadow-none]",
+  // border radius
+  ".rounded-none": "br-0px",
+  ".rounded-sm": "br-0.125rem",
+  ".rounded": "br-0.25rem",
+  ".rounded-md": "br-0.375rem",
+  ".rounded-lg": "br-0.5rem",
+  ".rounded-xl": "br-0.75rem",
+  ".rounded-2xl": "br-1rem",
+  ".rounded-3xl": "br-1.5rem",
+  ".rounded-full": "br-9999px",
+  // others
   ".italic": "font-s-italic",
+  // Text decoration
+  ".underline": "td-li-underline td-c-inherit",
+  ".overline": "td-li-overline td-c-inherit",
+  ".line-through": "td-li-line-through td-c-inherit",
+  ".no-underline": "td-li-none",
   ".max-md-none": "d-[max-md\\:none]",
   ".max-lg-none": "d-[max-lg\\:none]",
   ".min-lg-none": "d-[min-lg\\:none]",
@@ -107,4 +127,13 @@ export const styles: Styles = {
   ".isolate": "isolation-isolate",
   ".border": "bs-solid bw-0",
   ".text-primary, .text-primary-500": "tc-[accent-500]",
+  ".space-x-4 > * + *": "ml-1rem",
+  ".space-y-4 > * + *": "mt-1rem",
+  // list style position
+  ".list-inside": "li-s-loc-inside",
+  ".list-outside": "li-s-loc-outside",
+  // list style type
+  ".list-none": "li-s-type-none",
+  ".list-disc": "li-s-type-disc",
+  ".list-decimal": "li-s-type-decimal",
 };

@@ -11,7 +11,7 @@
   --font-body: "gabarito", sans-serif;
   --font-mono: "fira code", monospace;
   --min-lg\:none: block;
---sm-block-md-none: block;
+  --sm-block-md-none: block;
   --tx__shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tx__shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -29,7 +29,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
+  /* list-style: none; */
 }
 
 /* min-sm */
@@ -55,7 +55,7 @@
     --docs-layout: flex;
     --docs-position: sticky;
     --docs-sidebar-toggle: none;
---sm-block-md-none: none;
+    --sm-block-md-none: none;
   }
 }
 /* max-md */
@@ -64,7 +64,8 @@
     --max-md\:none: none;
     --docs-navigation: none;
     --docs-position: fixed;
-    --docs-top: 0;--aside-sm-full: 100vw;
+    --docs-top: 0;
+    --aside-sm-full: 100vw;
   }
 }
 /* md */

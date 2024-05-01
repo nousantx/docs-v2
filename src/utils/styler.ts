@@ -17,6 +17,8 @@ export function styler() {
     "td-s": "textDecorationStyle",
     "td-t": "textDecorationThickness",
     "td-o": "textDecorationOffset",
+    "li-s-loc": "listStylePosition",
+    "li-s-type": "listStyleType",
     shadow: "boxShadow",
     isolation: "isolation",
   });

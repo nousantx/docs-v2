@@ -45,8 +45,8 @@ function Home() {
         </div>
       </article>
       <DocLink
-        next="/docs/installation"
-        nextIcon="download"
+        next="/docs/intro"
+        nextIcon="flag"
         edit="https://github.com/nousantx/docs-v2/tree/main/src/pages/Home.tsx"
       />
     </Section>

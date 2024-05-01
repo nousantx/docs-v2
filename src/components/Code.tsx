@@ -1,7 +1,26 @@
 import React, { ReactNode, useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+import javascript from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
+import typescript from "react-syntax-highlighter/dist/esm/languages/hljs/typescript";
+import shell from "react-syntax-highlighter/dist/esm/languages/hljs/shell";
+import bash from "react-syntax-highlighter/dist/esm/languages/hljs/bash";
+import htmlbars from "react-syntax-highlighter/dist/esm/languages/hljs/htmlbars";
+import html from "react-syntax-highlighter/dist/esm/languages/hljs/htmlbars";
+import xml from "react-syntax-highlighter/dist/esm/languages/hljs/xml";
+import css from "react-syntax-highlighter/dist/esm/languages/hljs/css";
+
 import { useStyles } from "../hooks/useStyles";
+
+SyntaxHighlighter.registerLanguage("javascript", javascript);
+SyntaxHighlighter.registerLanguage("typescript", typescript);
+SyntaxHighlighter.registerLanguage("shell", shell);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("htmlbars", htmlbars);
+SyntaxHighlighter.registerLanguage("html", html);
+SyntaxHighlighter.registerLanguage("xml", xml);
+SyntaxHighlighter.registerLanguage("css", css);
 
 interface Code {
   title?: string;
@@ -34,21 +53,13 @@ const Code: React.FC<Code> = ({
         <span className="ms-sharp tc-[accent-500] text-lg">inventory</span>
         Code copied successfully!
       </div>
-      {/* )} */}
-      {/* <div
-        className={`fixed top-0 left-0 right-0 text-white text-center py-2 transition-opacity duration-300  ${
-          copy ? "bg-green-500 opacity-100" : "opacity-0"
-        }`}
-      >
-        Code copied successfully!
-      </div> */}
       {!codeOnly ? (
         <div
           className={`w-full flex space-between items-center bg-[neutral-200] p-10px radius-top-4px`}
         >
           <p className="text-sm font-medium flex-center gap-6px">
             <span className="ms-sharp text-base tc-[accent-500]">draft</span>
-            {title}
+            {title || lang}
           </p>
           {copy ? (
             <button className="btn flex-center gap-6px tc-[neutral-800]">
@@ -82,7 +93,6 @@ const Code: React.FC<Code> = ({
           )}
         </div>
       ) : null}
-
       <SyntaxHighlighter
         showLineNumbers={showNumber}
         language={lang}

@@ -1,8 +1,9 @@
 import { ReactElement } from "react";
 import GetStarted from "../docs/get-started";
 import CLI from "./CLI";
-import Docs from "./Docs";
+
 import Install from "./Install";
+import Intro from "../docs/Intro";
 
 type Page = {
   title: string;
@@ -13,9 +14,9 @@ type Page = {
 
 const Pages: Page[] = [
   {
-    title: "TenoxUI Docs",
-    slug: "/",
-    element: <Docs />,
+    title: "Introduction",
+    slug: "intro",
+    element: <Intro />,
   },
   {
     title: "Installation",
