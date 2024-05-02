@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { Routes as DocsRoutes } from "../docs";
 import { NavLink, useLocation } from "react-router-dom";
-import { applyHovers, makeStyles } from "tenoxui";
+import { applyHovers } from "tenoxui";
 import { styler } from "../utils/styler";
 import Pages from "../pages";
 
@@ -9,19 +9,6 @@ const SidebarLinks: React.FC = () => {
   const location = useLocation();
   useLayoutEffect(() => {
     styler();
-    makeStyles({
-      ".sidebar-links": {
-        "": "",
-        a: "tc-inherit",
-      },
-      ".sidebar-group": {
-        ".sidebar-link": "tc-[neutral-900]",
-        ".sidebar-link.active": "tc-[accent-500]",
-        ".sidebar-route-link": "tc-[neutral-600] bw-0 bc-transparent p-0",
-        ".sidebar-route-link.active":
-          "bs-solid bw-0 bw-left-1px pl-8px bc-[accent-500] tc-[neutral-900]",
-      },
-    });
     applyHovers({
       ".sidebar-route-link": [
         "tc-[neutral-600]",
@@ -36,9 +23,10 @@ const SidebarLinks: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="sidebar-group mt-2rem">
+    <div className="sidebar-group mt-1rem">
       {Pages.map((page) => (
         <NavLink
+          key={page.slug}
           to={`/docs/${page.slug}`}
           className="text-base font-normal flex-center gap-4px jc-start sidebar-link mb-8px"
         >
@@ -56,9 +44,9 @@ const SidebarLinks: React.FC = () => {
               arrow_drop_down
             </span>
           </NavLink>
-        <ul className="mb-1rem list-none">
-            {routeGroup.routes.map((route) => (
-              <li className="p-0 tc-[neutral-600] mt-4px">
+          <ul className="mb-1rem list-none">
+            {routeGroup.routes.map((route, index) => (
+              <li key={index} className="p-0 tc-[neutral-600] mt-4px">
                 <NavLink
                   to={`/docs${routeGroup.slug}${route.slug}`}
                   className="text-sm sidebar-route-link"

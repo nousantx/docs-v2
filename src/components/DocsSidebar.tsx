@@ -28,7 +28,7 @@ const DocsSidebar: React.FC = () => {
     return null;
   }
 
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const toggleSidebar = () => {
     setSidebar(!sidebar);
   };
@@ -116,24 +116,6 @@ const DocsSidebar: React.FC = () => {
           <div>
             <SidebarLinks />
           </div>
-          <ul className="d-none">
-            <li>
-              <NavLink to="/docs/classes">Classes</NavLink>
-            </li>
-            <ul>
-              <li>
-                <NavLink to="/docs/classes/flexbox">Flex Docs</NavLink>
-              </li>
-            </ul>
-            <li>
-              <NavLink to="/docs/functions">Functions</NavLink>
-            </li>
-            <ul>
-              <li>
-                <NavLink to="/docs/functions/use-class">UseClass Docs</NavLink>
-              </li>
-            </ul>
-          </ul>
         </div>
         <div className="bg-red w-full h-100% none"></div>
       </aside>
