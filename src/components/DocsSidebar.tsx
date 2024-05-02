@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ReactNode } from "react";
 import { styler } from "../utils/styler";
 import SidebarLinks from "./SidebarLinks";
@@ -113,7 +113,7 @@ const DocsSidebar: React.FC = () => {
             </header>
           </Link>
           {/* Link */}
-          <div>
+          <div className="h-90% overY-auto mt-2rem">
             <SidebarLinks />
           </div>
         </div>

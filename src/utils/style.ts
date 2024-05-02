@@ -3,6 +3,7 @@ type Styles = Record<string, string | Record<string, string>>;
 
 // all styles
 export const styles: Styles = {
+  "::-webkit-scrollbar": "w-5px",
   html: "scroll-smooth",
   body: "family-[font-body] bg-[neutral-100] tc-[neutral-900]",
   p: "family-[font-body] tc-[neutral-800] lh-1.75rem",
@@ -37,6 +38,19 @@ export const styles: Styles = {
   ".flex-1": "fx-grow-1 fx-shrink-1 fx-basis-0%",
   ".center": "flex-parent-center",
   ".space > * + *": "ml-1rem",
+  // sidebar
+  ".sidebar-links": {
+    "": "",
+    a: "tc-inherit",
+  },
+  ".sidebar-group": {
+    ".sidebar-link": "tc-[neutral-900]",
+    ".sidebar-link.active": "tc-[accent-500]",
+    ".sidebar-route-link": "tc-[neutral-600] bw-0 bc-transparent p-0",
+    ".sidebar-route-link.active":
+      "bs-solid bw-0 bw-left-1px pl-8px bc-[accent-500] tc-[neutral-900]",
+  },
+  // footer
   ".footer-link": {
     "": "mt-0.75rem  tc-[neutral-800]",
     a: "tc-inherit",

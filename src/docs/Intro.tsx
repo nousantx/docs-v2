@@ -77,8 +77,12 @@ const Intro = () => {
       </p>
 
       <Code lang="html" showNumber className="mt-8px">
-        {`<div class="display-flex flex-parent-center gap-6px">
-  <span class="ms-sharp fs-18px tc-[accent-500]">bubble_chart</span>
+        {`<div class="d-flex flex-parent-center gap-6px">
+  <!-- icon -->
+  <span class="ms-sharp fs-18px tc-[accent-500]">
+  bubble_chart
+  </span>
+  <!-- text -->
   <p class="fs-14px fw-500">It's Bubble</p>
 </div>`}
       </Code>
@@ -113,7 +117,14 @@ const Intro = () => {
         <li className="mt-8px paragraph">
           <span className="code tc-[accent-500]">ms-sharp</span> : Is a
           shorthand for{" "}
-          <span className="code">google-material-symbols-sharp</span>.
+          <a
+            href="https://fonts.google.com/icons"
+            target="_blank"
+            className="code underline td-c-[accent-500]"
+          >
+            google-material-symbols-sharp
+          </a>
+          .
         </li>
         <li className="mt-8px paragraph">
           <span className="code tc-[accent-500]">fs-18px</span>,{" "}
@@ -135,12 +146,16 @@ const Intro = () => {
         </li>
       </ul>
 
-<hr className="bg-[neutral-300] h-1px bdr-none mv-1.5rem d-none"/>
+      <hr className="bg-[neutral-300] h-1px bdr-none mv-1.5rem d-none" />
 
-      <p className="text mt-1.5rem">As you can see, all of the value is defined inside element class names, so it gives you more customization, just add your desired value and it will apllied to that element.</p>
+      <p className="text mt-1.5rem">
+        As you can see, all of the value is defined inside element class names,
+        so it gives you more customization, just add your desired value and it
+        will apllied to that element.
+      </p>
 
       <DocLink
-edit="/docs/Intro.tsx"
+        edit="/docs/Intro.tsx"
         prev="/"
         prevTitle="Home"
         prevIcon="home"
