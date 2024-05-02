@@ -5,7 +5,7 @@ import CodeOutput from "../components/CodeOutput";
 
 const Intro = () => {
   return (
-    <Section>
+    <Section className="h-100%">
       <h1 className="text-5xl">Welcome!!</h1>
 
       <h2 id="greet" className="mt-3.5rem">
@@ -19,7 +19,7 @@ const Intro = () => {
 
       <p className="text mt-1.5rem">
         TenoxUI not providing any defined class names such as <code>mt-1</code>,{" "}
-        <code>h-12</code>, <code>d-flex</code>, and more. You make your own
+        <code>h-12</code>, <code>container</code>, and more. You make your own
         class from value you desired. So, instead of using defined value like
         that, you can use class names like <code>mt-6px</code>,{" "}
         <code>p-1.5rem</code>, <code>h-100svh</code>, and more.
@@ -53,7 +53,7 @@ const Intro = () => {
         lang="html"
         title="example"
         className="mt-1rem"
-      >{`<h1 class="fs-2.3rem fw-800"> Hello World! </h1>`}</Code>
+      >{`<h1 class="fs-2.3rem fw-800">Hello World!</h1>`}</Code>
 
       <CodeOutput title="Output: Hello World!">
         <h1 className="fs-2.3rem fw-800">Hello World!</h1>
@@ -90,9 +90,9 @@ const Intro = () => {
         </div>
       </CodeOutput>
 
-      <h3 className="mt-1.5rem">Code Breakdown :</h3>
+      <h3 className="mv-1.5rem">Code Breakdown :</h3>
 
-      <ul className="list-decimal list-inside mt-16px">
+      <ul className="list-decimal list-inside">
         <li className="mt-8px paragraph">
           <span className="code tc-[accent-500]">display-flex</span> : Set{" "}
           <span className="code">display</span> property to{" "}
@@ -135,9 +135,12 @@ const Intro = () => {
         </li>
       </ul>
 
-      <p className="text mt-8px"></p>
+<hr className="bg-[neutral-300] h-1px bdr-none mv-1.5rem d-none"/>
+
+      <p className="text mt-1.5rem">As you can see, all of the value is defined inside element class names, so it gives you more customization, just add your desired value and it will apllied to that element.</p>
 
       <DocLink
+edit="/docs/Intro.tsx"
         prev="/"
         prevTitle="Home"
         prevIcon="home"

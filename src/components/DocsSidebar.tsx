@@ -113,7 +113,7 @@ const DocsSidebar: React.FC = () => {
             </header>
           </Link>
           {/* Link */}
-          <div className="">
+          <div>
             <SidebarLinks />
           </div>
           <ul className="d-none">

@@ -74,7 +74,7 @@ export const useStyles = (...hooks: any[]) => {
 };`}
           </Code>
         </Tip>
-        <Tip className="mt-2rem" variant="tip" title="Just Tips" id="dos">
+        <Tip className="mt-2rem" variant="tip" title="Just Tips">
           <h2 className="text-3xl font-semibold tracking-tight">Tips</h2>
         </Tip>
         <Tip className="mt-2rem" variant="warning" title="Did you get warning?">
