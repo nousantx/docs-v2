@@ -5,7 +5,6 @@ import { useStyles } from "../hooks/useStyles";
 import { Link } from "react-router-dom";
 function Home() {
   useStyles();
-
   return (
     <Section className="ph-2rem">
       <Meta title="Home" />
@@ -22,7 +21,7 @@ function Home() {
           <p className="text-base leading-7 tc-[neutral-700]">
             A CSS Framework without CSS file.{" "}
             <code className="tc-[accent-500] bg-[neutral-200] ph-6px br-2px fw-500">
-              2.5k
+              2k
             </code>{" "}
             gzip njir 🗿
           </p>
@@ -30,17 +29,18 @@ function Home() {
         <div className="flex-center gap-1rem mt-1rem">
           <Link
             to="/docs/get-started"
-            className="btn btn-primary text-base bg-[accent-500] tc-[neutral-100] ph-12px pv-4px br-100px"
+            className="btn btn-primary text-base flex-center gap-6px bg-[accent-500] tc-[neutral-100] ph-12px pv-4px br-100px bw-1px"
           >
+            <span className="ms-sharp text-base">auto_stories</span>
             Get Started
           </Link>
           <Link
             target="_blank"
             to="https://github.com/tenoxui/css"
-            className="btn btn-secondary flex-center gap-6px text-base bw-1px bs-solid bc-[neutral-900] tc-[neutral-900] ph-12px pv-4px br-100px"
+            className="btn btn-secondary flex-center gap-6px text-base bw-1px bs-solid bc-[neutral-900] tc-[neutral-900] ph-12px pv-4px br-100px fw-300"
           >
-            GitHub
             <i className="txi ti-github_square"></i>
+            Repository
           </Link>
         </div>
       </article>

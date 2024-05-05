@@ -33,8 +33,8 @@ const Intro = () => {
 
       <p className="text mt-8px">
         TenoxUI is a styling framework that work using DOM manipulation to apply
-        the styles into element. It will pairing the type and value you want as
-        style, like this :
+        the styles into element. It will pair the type and value from a
+        classname as style, just like this :
       </p>
 
       <Code
@@ -44,9 +44,9 @@ const Intro = () => {
       >{`{type}-{value}`}</Code>
 
       <p className="text">
-        So, the possible values is unlimited, we're not defining any value, you
-        will the one who will defining your own styles. The example is like this
-        :
+        So, the possibilities of values is unlimited, we're not defining any
+        value, you will the one who will defining your own styles. The example
+        is like this :
       </p>
 
       <Code
@@ -96,27 +96,23 @@ const Intro = () => {
 
       <h3 className="mv-1.5rem">Code Breakdown :</h3>
 
-      <ul className="list-decimal list-inside">
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">display-flex</span> : Set{" "}
-          <span className="code">display</span> property to{" "}
-          <span className="code">flex</span>.
+      <ul className="docs-list list-decimal list-inside">
+        <li>
+          <code className="primary">d-flex</code> : Set <code>display</code>{" "}
+          property to <code>flex</code>.
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">flex-parent-center</span> :{" "}
-          <span className="code">flex-parent-{"{value}"}</span> will set both{" "}
-          <span className="code">align-items</span> and{" "}
-          <span className="code">justify-content</span> property to have{" "}
-          <span className="code">center</span> value.
+        <li>
+          <code className="primary">flex-parent-center</code> :{" "}
+          <code>flex-parent-{"{value}"}</code> will set both{" "}
+          <code>align-items</code> and <code>justify-content</code> property to
+          have <code>center</code> value.
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">gap-6px</span> : Set{" "}
-          <span className="code">gap</span> property value to{" "}
-          <span className="code">6px</span>.
+        <li>
+          <code className="primary">gap-6px</code> : Set <code>gap</code>{" "}
+          property value to <code>6px</code>.
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">ms-sharp</span> : Is a
-          shorthand for{" "}
+        <li>
+          <code className="primary">ms-sharp</code> : Is a shorthand for{" "}
           <a
             href="https://fonts.google.com/icons"
             target="_blank"
@@ -126,23 +122,20 @@ const Intro = () => {
           </a>
           .
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">fs-18px</span>,{" "}
-          <span className="code tc-[accent-500]">fs-14px</span> : Set{" "}
-          <span className="code">font-size</span> property.
+        <li>
+          <code className="primary">fs-18px</code>,{" "}
+          <code className="primary">fs-14px</code> : Set <code>font-size</code>{" "}
+          property.
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">tc-[accent-500]</span>,{" "}
-          <span className="code">fs-14px</span> : Set{" "}
-          <span className="code">color</span> property for icon, this is using{" "}
-          square bracket <span className="code">[{" {value} "}]</span> that
-          indicate the value is called from css variable{" "}
-          <span className="code">--accent-500: {"color_value"};</span>
+        <li>
+          <code className="primary">tc-[accent-500]</code>, <code>fs-14px</code>{" "}
+          : Set <code>color</code> property for icon, this is using square
+          bracket <code>[{" {value} "}]</code> that indicate the value is called
+          from css variable <code>--accent-500: {"color_value"};</code>
         </li>
-        <li className="mt-8px paragraph">
-          <span className="code tc-[accent-500]">fw-500</span> : Set{" "}
-          <span className="code">font-weight</span> property to{" "}
-          <span className="code">500</span>.
+        <li>
+          <code className="primary">fw-500</code> : Set <code>font-weight</code>{" "}
+          property to <code>500</code>.
         </li>
       </ul>
 
@@ -155,13 +148,13 @@ const Intro = () => {
       </p>
 
       <DocLink
-        edit="/docs/Intro.tsx"
+        edit="/docs/Intro"
         prev="/"
         prevTitle="Home"
         prevIcon="home"
-        next="/docs/installation"
-        nextTitle="Installation"
-        nextIcon="download"
+        next="/docs/start"
+        nextTitle="Get Started"
+        nextIcon="auto_stories"
       />
     </Section>
   );

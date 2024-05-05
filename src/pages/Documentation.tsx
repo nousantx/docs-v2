@@ -101,9 +101,9 @@ const Documentation: React.FC = () => {
                       />
                       <div className="ph-2rem pt-2rem">
                         <Breadcrumbs pageTitle={page.title} />
-                        {/* <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                        <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
                           {renderOnThisPageSection()}
-                        </div> */}
+                        </div>
                       </div>
                       {page.element}
                     </>
@@ -155,11 +155,30 @@ const Documentation: React.FC = () => {
               ))}
               {DocsRoutes.map((routeGroup) =>
                 routeGroup.routes.map((route) => (
-                  <Route
-                    key={route.slug}
-                    path={`${routeGroup.slug}${route.slug}`}
-                    element={<route.element />}
-                  />
+                  <>
+                    <Route
+                      key={route.slug}
+                      path={`${routeGroup.slug}${route.slug}`}
+                      element={
+                        <>
+                          <Meta
+                            title={route.name || "Docs"}
+                            desc={
+                              route.desc ||
+                              "Explore tenoxui documentation route."
+                            }
+                          />
+                          <div className="ph-2rem pt-2rem">
+                            <Breadcrumbs pageTitle={route.name} />
+                            <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                              {renderOnThisPageSection()}
+                            </div>
+                          </div>
+                          {route.element}
+                        </>
+                      }
+                    />
+                  </>
                 ))
               )}
             </Route>

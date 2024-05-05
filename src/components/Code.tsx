@@ -28,6 +28,7 @@ interface Code {
   className?: string;
   codeOnly?: boolean;
   showNumber?: boolean;
+  isWrap?: boolean;
   children: string | ReactNode;
 }
 
@@ -37,6 +38,7 @@ const Code: React.FC<Code> = ({
   children,
   codeOnly,
   showNumber,
+  isWrap,
   className,
 }) => {
   const [copy, setCopy] = useState(false);
@@ -95,6 +97,7 @@ const Code: React.FC<Code> = ({
       ) : null}
       <SyntaxHighlighter
         showLineNumbers={showNumber}
+        wrapLongLines={isWrap}
         language={lang}
         style={atomOneDark}
         className={`p-1rem bg-#1d1d1d relative ${

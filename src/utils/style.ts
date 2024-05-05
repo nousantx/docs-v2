@@ -1,5 +1,9 @@
 // define styles :D
-type Styles = Record<string, string | Record<string, string>>;
+interface typeObjects {
+  [key: string]: string | typeObjects;
+}
+
+type Styles = typeObjects | Record<string, typeObjects>;
 
 // all styles
 export const styles: Styles = {
@@ -11,6 +15,8 @@ export const styles: Styles = {
   a: "tc-[neutral-800]",
   "p code, .code":
     "family-[font-mono] tc-[neutral-900] bg-[neutral-200] ph-6px br-4px fw-500 fs-80%",
+  "code.primary": "tc-[accent-500]",
+  "code span.primary": "tc-[accent-500]",
   "p.text, .paragraph, .para": "fs-1rem lh-1.5rem ta-justify",
   nav: {
     "": "bg-[neutral-100] w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[sb] position-fixed t-0 l-0 r-0 z-998",
@@ -150,4 +156,14 @@ export const styles: Styles = {
   ".list-none": "li-s-type-none",
   ".list-disc": "li-s-type-disc",
   ".list-decimal": "li-s-type-decimal",
+  // docs list item styles
+  ".docs-list": {
+    "": "li-s-loc-inside",
+    li: {
+      "": "fs-1rem lh-1.5rem ta-justify mt-8px",
+      "code, span.code":
+        "tc-[neutral-900] bg-[neutral-200] ph-6px br-4px fw-500 fs-80%",
+      "code.primary, span.code.primary": "tc-[accent-500]",
+    },
+  },
 };

@@ -8,18 +8,18 @@ export const Classes: Route[] = [
     desc: "CLI Documentation.",
     slug: "/suki",
     icon: "terminal",
-    element: Flex,
+    element: <Flex />,
   },
   {
     name: "Flex Docs",
     desc: "Its flexbox documentation",
     slug: "/flexbox",
-    element: Flex,
+    element: <Flex />,
   },
   {
     name: "Tenox Docs",
     desc: "Its Tenox App documentation",
     slug: "/tenox-app",
-    element: Tenox,
+    element: <Tenox />,
   },
 ];

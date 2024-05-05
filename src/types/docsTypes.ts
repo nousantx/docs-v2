@@ -10,7 +10,7 @@ export interface Route {
   desc: string;
   slug: string;
   icon?: string;
-  element: React.ComponentType<any>;
+  element: any;
 }
 
 export interface DocsRoutes {

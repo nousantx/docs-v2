@@ -1916,10 +1916,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-tenoxui@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.7.1.tgz#da819c26348d9b2bb2ae340e064e71925d48c7f0"
-  integrity sha512-svMRHChBIC3YviPbruraZTugjVpigHBa5MKhIpemWmLUADWsaqNx+8aTyLh/QxLqfKYSp9yf64Q8q2bqTmKqkg==
+tenoxui@0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.8.0.tgz#342c226bba19e1e847d9fb867075e9631a4db16d"
+  integrity sha512-3v87e/qwhlD2MDJ8dB5cWK2a19J0aUP1fuMgoinbfPidO4sPdAPiVDyXpur3T9yzZfIfhsuTxEeHf8pRzEmrrw==
 
 text-table@^0.2.0:
   version "0.2.0"

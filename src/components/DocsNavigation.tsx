@@ -21,13 +21,17 @@ const DocLink: React.FC<{
   next,
   className,
 }) => {
-  const location = useLocation();
-  const githubEditLink =
-    `https://github.com/nousantx/docs-v2/tree/main/src${edit}` ||
-    `https://github.com/nousantx/docs-v2/tree/main/src${location.pathname}.tsx`;
-  useStyles();
+  const { pathname } = useLocation();
 
-  // const { pathname } = useLocation();
+  const formattedPathname = pathname.startsWith("/")
+    ? pathname.slice(1)
+    : pathname;
+
+  const githubEditLink = edit
+    ? `https://github.com/nousantx/docs-v2/tree/main/src${edit}.tsx`
+    : `https://github.com/nousantx/docs-v2/tree/main/src${formattedPathname}.tsx`;
+
+  useStyles();
 
   useEffect(() => {
     window.scrollTo(0, 0);

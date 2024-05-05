@@ -19,6 +19,11 @@ const Pages: Page[] = [
     element: <Intro />,
   },
   {
+    title: "Get Started",
+    slug: "start",
+    element: <GetStarted />,
+  },
+  {
     title: "Installation",
     slug: "installation",
     element: <Install />,
@@ -27,11 +32,6 @@ const Pages: Page[] = [
     title: "CLI Integration",
     slug: "cli",
     element: <CLI />,
-  },
-  {
-    title: "Get Started",
-    slug: "get-started",
-    element: <GetStarted />,
   },
 ];
 

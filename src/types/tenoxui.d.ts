@@ -35,10 +35,16 @@ declare module "tenoxui" {
     propsObject: Record<string, string | string[]>
   ): void;
 
+  interface typeObjects {
+    [key: string]: string | typeObjects;
+  }
+  
+  type Styles = typeObjects | Record<string, typeObjects>;
+
   // Define the makeStyles function
   export function makeStyles(
-    stylesObject: Record<string, string | Record<string, string>>
-  ): Record<string, string | Record<string, string>>;
+    stylesObject: Styles
+  ): Styles;
 
   // Define the applyHover function
   export function applyHover(
@@ -54,3 +60,16 @@ declare module "tenoxui" {
   // Define the tenoxui function
   export default function tenoxui(): void;
 }
+
+makeStyles({
+  style: {
+    foo: {
+      bar: "hello",
+    },
+  },
+  prop: {
+    foo: {
+      bar: "hello",
+    },
+  },
+});

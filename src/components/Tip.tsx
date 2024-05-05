@@ -1,5 +1,4 @@
 import React, { ReactNode, useLayoutEffect } from "react";
-
 import { styler } from "../utils/styler";
 import { makeStyles } from "tenoxui";
 
@@ -18,7 +17,7 @@ const Tip: React.FC<TipProps> = ({
 }) => {
   useLayoutEffect(() => {
     makeStyles({
-      ".tip-wrapper > *": "td-c-inherit",
+      ".tip-wrapper *": "td-c-inherit",
     });
     styler();
   }, []);

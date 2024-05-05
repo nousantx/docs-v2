@@ -1,99 +1,134 @@
 import Code from "../components/Code";
 import DocLink from "../components/DocsNavigation";
-import Meta from "../components/Helmet";
-import Tip from "../components/Tip";
+import Section from "../components/Section";
 import { useStyles } from "../hooks/useStyles";
 
 const GetStarted = () => {
   useStyles();
   return (
     <>
-      <Meta title="Get Sarted" />
-      <section className="ph-2rem pt-0 pb-1rem w-full">
-        <header>
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Get Started
-          </h1>
-          <p className="text-lg mt-6px">
-            Let's learn about tenoxui css framework. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Ex, illum.
-          </p>
-        </header>
-        <h2
-          id="installation"
-          className="text-3xl font-semibold tracking-tight mt-2rem"
-        >
+      <Section>
+        <h1 id="start">Get Started</h1>
+
+        <p className="paragraph mt-8px">
+          TenoxUI CSS is a utility-first css framework that work using DOM to
+          manipulate the styles into element by its classname, like{" "}
+          <code>d-flex</code>, <code>mt-10px</code>, <code>bg-#ccf654</code> and
+          so on. So, it will slice the classname into two pieces, first is the
+          type, and second is the value. TenoxUI will works like this :
+        </p>
+
+        <Code
+          lang="javascript"
+          codeOnly
+          className="mv-1rem"
+        >{`{type}-{value}`}</Code>
+
+        <p className="paragraph">
+          What's make tenoxui different from other css framework? tenoxui is not
+          using defined classname like <code>m-1</code>, <code>p-8</code>,{" "}
+          <code>container</code> and more that already have defined value, like{" "}
+          <code>m-1</code> will apply <code>margin: 2px;</code> and so on.
+          Instead, tenoxui using real value that will applied to the element,
+          like{" "}
+          <code>
+            p-<span className="primary">2rem</span>
+          </code>
+          ,{" "}
+          <code>
+            mt-<span className="primary">10px</span>
+          </code>
+          ,{" "}
+          <code>
+            bg-<span className="primary">#ccf654</span>
+          </code>
+          , and more.
+        </p>
+
+        <h2 id="installation" className="mt-2.5rem">
           Installation
         </h2>
-        <p className="text-lg font-light mt-6px mb-1rem">
-          Let's learn about tenoxui css framework. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ex, illum.
+
+        <p className="paragraph mt-8px">
+          There's several ways to add tenoxui to your project :
         </p>
-        <Code title="NPM" lang="bash">
-          {`npm i tenoxui --save-dev`}
-        </Code>
-        <p className="text-lg leading-7 mv-8px pl-1rem">Or</p>
-        <Code title="Yarn" lang="bash">
-          {`yarn add tenoxui -D`}
-        </Code>
-        <Tip className="mt-2rem" variant="danger" title="This is danger zone">
-          <h2 className="text-3xl font-semibold tracking-tight">Danger Zone</h2>
-        </Tip>
-        <Tip className="mt-2rem" variant="info" title="Tip nya kak">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Simple Usage
-          </h2>
 
-          <Code lang="typescript" className="mt-1rem" title="styler.jsx">
-            {`import tenoxui, { defineProps, makeStyles } from "tenoxui";
-import { styles } from "./style";
+        <h3 className="text-lg mt-1.5rem">Using NPM</h3>
 
-export function styler() {
-  // new props needed
-  defineProps({
-    d: "display",
-  });
-  makeStyles(styles);
-  tenoxui();
-}
-`}
-          </Code>
-          <Code
-            lang="typescript"
-            className="mt-1rem"
-            title="useStyles.jsx"
-            showNumber
-          >
-            {`import { useLayoutEffect } from "react";
-import { styler } from "../utils/styler";
+        <Code
+          lang="shell"
+          title="NPM"
+          className="mt-8px"
+        >{`npm i tenoxui --save-dev`}</Code>
 
-export const useStyles = (...hooks: any[]) => {
-  useLayoutEffect(() => {
-    styler();
-  }, [hooks]);
-};`}
-          </Code>
-        </Tip>
-        <Tip className="mt-2rem" variant="tip" title="Just Tips">
-          <h2 className="text-3xl font-semibold tracking-tight">Tips</h2>
-        </Tip>
-        <Tip className="mt-2rem" variant="warning" title="Did you get warning?">
-          <h2 className="text-3xl font-semibold tracking-tight">Its warning</h2>
-          <Code
-            lang="javascript"
-            className="mt-1rem"
-            codeOnly
-          >{`import tenoxui from "tenoxui";`}</Code>
-        </Tip>
+        <h3 className="text-lg mt-1.5rem">Using NPM</h3>
+
+        <Code
+          lang="html"
+          title="HTML"
+          isWrap
+          className="mt-8px"
+        >{`<script src="https://cdn.jsdelivr.net/npm/tenoxui"></script>`}</Code>
+
+        <h2 id="configuration" className="mt-2.5rem">
+          Configuration
+        </h2>
+
+        <p className="paragraph mt-8px">
+          How to configure tenoxui css framework with your project :
+        </p>
+
+        <h3 className="text-lg mt-1.5rem">HTML</h3>
+
+        <p className="paragraph mt-8px">
+          There's no specific configuration in html file, just include the
+          tenoxui file or call <code>tenoxui</code> function to apply the styles
+        </p>
+
+        <Code
+          lang="html"
+          title="index.html"
+          showNumber
+          className="mt-8px"
+        >{`<body class="bg-#0d0d0d tc-white">
+  <h1 class="tc-#ccf654">Hello World!</h1>
+  <!-- tenoxui script -->
+  <script src="path/to/tenoxui"></script>
+</body>`}</Code>
+
+        <p className="pl-1rem mt-8px">Or</p>
+
+        <Code
+          lang="html"
+          title="index.html"
+          showNumber
+          className="mt-8px"
+        >{`<!DOCTYPE html>
+<html>
+  <head>
+    <title>TenoxUI Page</title>
+    <!-- tenoxui script -->
+    <script src="path/to/tenoxui"></script>
+  </head>
+  <body class="bg-#0d0d0d tc-white">
+    <h1 class="tc-#ccf654">Hello World!</h1>
+    
+    <script>
+      tenoxui();
+    </script>
+  </body>
+</html>`}</Code>
+
         <DocLink
-          prev="/"
-          prevIcon="home"
-          prevTitle="Overview"
-          next="/docs/cli"
+          edit="/docs/get-started"
+          prev="/docs/intro"
+          prevIcon="flag"
+          prevTitle="Intro"
+          next="/docs/intro"
           nextTitle="CLI Integration"
           nextIcon="terminal"
         />
-      </section>
+      </Section>
     </>
   );
 };
