@@ -48,8 +48,8 @@ const Code: React.FC<Code> = ({
     <div className={`w-full relative ${className}`}>
       {/* {copy && ( */}
       <div
-        className={`position-fixed top-50% r--100% bg-[neutral-100] tc-[neutral-900] ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-8px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md z-9999 ${
-          !copy ? "opa-1 r-1rem" : "opa-0 r--100%"
+        className={`position-fixed t-4.5rem r--100% bg-[neutral-100] tc-[neutral-900] ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-8px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md z-9999 ${
+          copy ? "opa-1 r-1rem" : "opa-0 r--100%"
         }`}
       >
         <span className="ms-sharp tc-[accent-500] text-lg">inventory</span>
