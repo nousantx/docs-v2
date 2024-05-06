@@ -49,6 +49,11 @@ export function styler() {
       "bg-[neutral-900] bc-transparent tc-[neutral-100]",
       "tr-time-0.3s bs-solid bw-1px",
     ],
+    ".hover\\:border-primary": [
+      "bc-transparent",
+      "bc-[accent-500]",
+      "tr-prop-all border bw-1px tr-time-0.3s",
+    ],
   });
   // init tenoxui function to handle all styles
   tenoxui();

@@ -126,7 +126,7 @@ const Documentation: React.FC = () => {
                             <Link
                               key={route.slug}
                               to={`/docs${routeGroup.slug}${route.slug}`}
-                              className="fx-250px bg-[neutral-200] p-1.5rem br-4px tc-[neutral-900] flex-center gap-1rem shadow-md"
+                              className="fx-250px bg-[neutral-200] p-1.5rem br-4px tc-[neutral-900] flex-center gap-1rem shadow-md border bw-1px bc-transparent hover:border-primary"
                             >
                               {/* <span className="ms-sharp text-xl tc-[accent-500]">
                                 {route.icon || "book"}

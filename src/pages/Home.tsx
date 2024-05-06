@@ -28,7 +28,7 @@ function Home() {
         </header>
         <div className="flex-center gap-1rem mt-1rem">
           <Link
-            to="/docs/get-started"
+            to="/docs/start"
             className="btn btn-primary text-base flex-center gap-6px bg-[accent-500] tc-[neutral-100] ph-12px pv-4px br-100px bw-1px"
           >
             <span className="ms-sharp text-base">auto_stories</span>
