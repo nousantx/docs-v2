@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStyles } from "../hooks/useStyles";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   useStyles();
@@ -22,10 +22,14 @@ const Navbar: React.FC = () => {
       </Link>
       <ul className="flex-center gap-1rem ml-auto">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" className="nav-link">
+            Overview
+          </NavLink>
         </li>
         <li>
-          <Link to="/docs">Docs</Link>
+          <NavLink to="/docs" className="nav-link">
+            Docs
+          </NavLink>
         </li>
         <li>
           <a

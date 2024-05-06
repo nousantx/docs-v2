@@ -15,12 +15,15 @@ const Flex = () => {
         build responsive web pages without having to use tricky hacks and a lot
         of float and position properties in our CSS code.
       </p>
+
       <h2 className="mt-2rem">Types and Properties</h2>
+
       <p className="text mt-8px">All flexbox type and properties :</p>
 
       <h3 id="flex-type" className="mt-1.5rem">
         Flex types
       </h3>
+
       <ul className="list-decimal list-inside docs-list mt-1rem">
         <li>
           <code className="primary">d</code>,{" "}
@@ -53,6 +56,7 @@ const Flex = () => {
           <code>flex-wrap</code> property
         </li>
       </ul>
+
       <h3 id="align-type" className="mt-1.5rem">
         Align types
       </h3>
@@ -89,6 +93,7 @@ const Flex = () => {
           .
         </p>
       </Tip>
+
       <DocLink
         edit="/docs/classes/Flex.tsx"
         prev="/docs/classes/align"

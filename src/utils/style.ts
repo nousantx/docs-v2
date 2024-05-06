@@ -14,7 +14,7 @@ export const styles: Styles = {
   code: "family-[font-mono]",
   a: "tc-[neutral-800]",
   "p code, .code":
-    "family-[font-mono] tc-[neutral-900] bg-[neutral-200] ph-6px br-4px fw-500 fs-80%",
+    "family-[font-mono] tc-[neutral-900] bg-[neutral-200-opa] ph-6px br-4px fw-500 fs-80%",
   "code.primary": "tc-[accent-500]",
   "code span.primary": "tc-[accent-500]",
   "p.text, .paragraph, .para": "fs-1rem lh-1.5rem ta-justify",
@@ -30,7 +30,6 @@ export const styles: Styles = {
   h3: "fs-1.5rem",
   h4: "fs-1.25rem",
   "h2,h3,h4": "fw-600 ls--0.025em",
-
   ".flex": "d-flex",
   ".w-full": "w-100%",
   ".flex-center": "d-flex flex-parent-center",
@@ -56,6 +55,8 @@ export const styles: Styles = {
     ".sidebar-route-link.active":
       "bs-solid bw-0 bw-left-1px pl-8px bc-[accent-500] tc-[neutral-900]",
   },
+  ".nav-link": "bs-solid bw-0 bw-bottom-1px bc-transparent tc-[neutral-600]",
+  ".nav-link.active": "bc-[accent-500] tc-[neutral-900]",
   // footer
   ".footer-link": {
     "": "mt-0.75rem  tc-[neutral-800]",
@@ -160,7 +161,7 @@ export const styles: Styles = {
   ".docs-list": {
     "": "li-s-loc-inside",
     li: {
-      "": "fs-1rem lh-1.5rem ta-justify mt-8px",
+      "": "fs-1rem lh-1.5rem mt-8px",
       "code, span.code":
         "tc-[neutral-900] bg-[neutral-200] ph-6px br-4px fw-500 fs-80%",
       "code.primary, span.code.primary": "tc-[accent-500]",

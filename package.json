@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.3",

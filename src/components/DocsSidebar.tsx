@@ -113,7 +113,7 @@ const DocsSidebar: React.FC = () => {
             </header>
           </Link>
           {/* Link */}
-          <div className="h-90% overY-auto mt-2rem">
+          <div className="h-90% over-y-auto mt-2rem">
             <SidebarLinks />
           </div>
         </div>

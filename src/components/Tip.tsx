@@ -53,9 +53,12 @@ const Tip: React.FC<TipProps> = ({
       className={`tip-wrapper ${bgColor} bs-solid bw-0 bw-left-2px bc-[${vaColor}] p-14px ph-1.25rem td-c-[${vaColor}] ${className}`}
     >
       {variant ? (
-        <p className={`flex ai-center text-sm gap-0.35rem tc-[${vaColor}]`}>
+        <p
+          className={`flex ai-center text-sm gap-0.35rem tc-[${vaColor}] tn-uppercase`}
+        >
           <span className="ms-sharp fs-18px">{icon}</span>
-          {title ? title : variant.charAt(0).toUpperCase() + variant.slice(1)}
+          {/* {title ? title : variant.charAt(0).toUpperCase() + variant.slice(1)} */}
+          {title ? title : <span className="tn-uppercase">{variant}</span>}
         </p>
       ) : null}
       {children}

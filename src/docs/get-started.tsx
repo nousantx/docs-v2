@@ -1,6 +1,7 @@
 import Code from "../components/Code";
 import DocLink from "../components/DocsNavigation";
 import Section from "../components/Section";
+import Tip from "../components/Tip";
 import { useStyles } from "../hooks/useStyles";
 
 const GetStarted = () => {
@@ -112,12 +113,47 @@ const GetStarted = () => {
   </head>
   <body class="bg-#0d0d0d tc-white">
     <h1 class="tc-#ccf654">Hello World!</h1>
-    
+    <!-- tenoxui script -->
     <script>
+      // apply tenoxui
       tenoxui();
     </script>
   </body>
 </html>`}</Code>
+
+        <h3 className="text-lg mt-1.5rem">React JS</h3>
+
+        <p className="paragraph mt-8px">
+          There's no specific configuration in html file, just include the
+          tenoxui file or call <code>tenoxui</code> function to apply the styles
+        </p>
+
+        <Code
+          lang="javascript"
+          title="App.jsx"
+          showNumber
+          className="mt-8px"
+        >{`import { useLayoutEffect } from "react";
+import tenoxui from "tenoxui";
+
+const App = () => {
+  useLayoutEffect(()=>{
+    tenoxui();
+  }, []);
+  return <h1 className="tc-#ccf654">Hello World!</h1>;
+}
+
+export default App;`}</Code>
+
+        <Tip variant="info" className="mv-1rem">
+          <p className="paragraph mt-8px">
+            tenoxui is using DOM to manipulate the style. So, you can use{" "}
+            <code>useEffect</code> or <code>useLayoutEffect</code> to ensure the
+            DOM is applies correctly, you can choose to apply after the DOM or
+            before it. I recommend to use <code>useLayoutEffect</code> instead.
+            Trust me.
+          </p>
+        </Tip>
 
         <DocLink
           edit="/docs/get-started"

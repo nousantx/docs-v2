@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 
 interface Meta {
   title?: string;
@@ -9,10 +9,12 @@ interface Meta {
 
 const Meta: React.FC<Meta> = ({ title, desc }) => {
   return (
-    <Helmet>
-      <title>{title} | TenoxUI Docs</title>
-      <meta name="description" content={desc} />
-    </Helmet>
+    <HelmetProvider>
+      <Helmet>
+        <title>{title} | TenoxUI Docs</title>
+        <meta name="description" content={desc} />
+      </Helmet>
+    </HelmetProvider>
   );
 };
 

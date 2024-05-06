@@ -33,8 +33,8 @@ const SidebarLinks: React.FC = () => {
           <span className="text-nowrap">{page.title}</span>
         </NavLink>
       ))}
-      {DocsRoutes.map((routeGroup) => (
-        <>
+      {DocsRoutes.map((routeGroup, index) => (
+        <div key={index}>
           <NavLink
             to={`/docs${routeGroup.slug}`}
             className="text-base font-medium flex-center gap-4px jc-start sidebar-link"
@@ -56,7 +56,7 @@ const SidebarLinks: React.FC = () => {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       ))}
     </div>
   );

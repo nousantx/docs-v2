@@ -12,6 +12,8 @@ export function styler() {
 
     "back-c": "backgroundColor",
     "font-s": "fontStyle",
+    "bg-img": "backgroundImage",
+    tn: "textTransform",
     // text-decoration
     "td-li": "textDecorationLine",
     "td-c": "textDecorationColor",
