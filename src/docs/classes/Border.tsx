@@ -4,8 +4,6 @@ import CodeOutput from "../../components/CodeOutput";
 import DocLink from "../../components/DocsNavigation";
 import Section from "../../components/Section";
 import { useStyles } from "../../hooks/useStyles";
-import Tip from "../../components/Tip";
-import { Link } from "react-router-dom";
 
 const Border = () => {
   useStyles();
@@ -107,19 +105,6 @@ const Border = () => {
         </li>
       </ul>
 
-      <Tip variant="info" className="mv-1.5rem">
-        <p className="mt-8px paragraph">
-          TenoxUI still under development. So, maybe there will be removal for
-          some properties which rarely used, like <code>radius-tl</code>,{" "}
-          <code>bs-top</code> and so on. But, you can still define it yourself
-          using{" "}
-          <Link to="/docs/function/define-props" className="underline">
-            defineProps function
-          </Link>
-          .
-        </p>
-      </Tip>
-
       <h2 id="usage-example" className="mt-2.5rem">
         Usage Example
       </h2>
@@ -136,12 +121,10 @@ const Border = () => {
         lang="html"
         className="mt-1rem"
         isWrap
-      >{`<div class="... bs-solid bw-2px br-1rem bc-[...]">
-  Hello
-</div>`}</Code>
+      >{`<div class="... bs-solid bw-2px br-1000px bc-{...}">Hello</div>`}</Code>
 
       <CodeOutput>
-        <div className="ph-1rem pv-8px bs-solid bw-2px br-1000px bc-[accent-500]">
+        <div className="ph-1rem pv-8px bs-solid bw-2px br-1000px bc-{accent-500}">
           Hello
         </div>
       </CodeOutput>
@@ -157,7 +140,7 @@ const Border = () => {
       >{`<div class="radius-tl-1rem radius-br-1rem ..."></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px radius-tl-1rem radius-br-1rem bw-2px bs-solid bc-[accent-500]"></div>
+        <div className="box-100px radius-tl-1rem radius-br-1rem bw-2px bs-solid bc-{accent-500}"></div>
       </CodeOutput>
 
       <h3 className="text-lg mt-1rem">Working with radius</h3>
@@ -171,7 +154,7 @@ const Border = () => {
       >{`<div class="radius-top-1rem ..."></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px radius-top-1rem bw-2px bs-solid bc-[accent-500]"></div>
+        <div className="box-100px radius-top-1rem bw-2px bs-solid bc-{accent-500}"></div>
       </CodeOutput>
 
       <DocLink

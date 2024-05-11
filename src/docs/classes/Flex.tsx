@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import Section from "../../components/Section";
-import Tip from "../../components/Tip";
 import { useStyles } from "../../hooks/useStyles";
 import DocLink from "../../components/DocsNavigation";
 
@@ -83,16 +81,6 @@ const Flex = () => {
           property
         </li>
       </ul>
-
-      <Tip className="mv-1.5rem">
-        <p className="mt-8px paragraph">
-          Not finding your desired properties? You can use{" "}
-          <Link to="/docs/function/define-props" className="underline">
-            defineProps function
-          </Link>
-          .
-        </p>
-      </Tip>
 
       <DocLink
         edit="/docs/classes/Flex.tsx"

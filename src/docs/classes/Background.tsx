@@ -79,7 +79,7 @@ const Background = () => {
       >{`<div class="box-100px bg-img-{url(...)} bg-size-cover bg-loc-center"></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px bg-img-{url(https://tenoxui.web.app/img/tenoxui.svg)} bg-size-cover bg-loc-center border bw-1px bc-[neutral-300] br-8px"></div>
+        <div className="box-100px bg-img-[url(https://tenoxui.web.app/img/tenoxui.svg)] bg-size-cover bg-loc-center border bw-1px bc-{neutral-300} br-8px"></div>
       </CodeOutput>
 
       <p className="paragraph mt-1.5rem">
