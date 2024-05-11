@@ -16,11 +16,11 @@ const Breadcrumbs: React.FC<{ pageTitle?: string }> = ({ pageTitle }) => {
   useStyles(location.pathname);
 
   return (
-    <div className="flex-center jc-[tx_fs] gap-10px flex-wrap mb-2rem">
+    <div className="flex-center jc-[flex-start] gap-10px flex-wrap mb-2rem">
       <Link to="/" className="box-30px flex-center">
-        <span className="ms-sharp fs-20px tc-[accent-500]">home</span>
+        <span className="ms-sharp fs-20px tc-{accent-500}">home</span>
       </Link>
-      <span className="ms-sharp fs-16px tc-[neutral-700]">chevron_right</span>
+      <span className="ms-sharp fs-16px tc-{neutral-700}">chevron_right</span>
       {pathnames.map((name, index) => {
         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
         const isLast = index === pathnames.length - 1;
@@ -37,7 +37,7 @@ const Breadcrumbs: React.FC<{ pageTitle?: string }> = ({ pageTitle }) => {
               {displayName}
             </NavLink>
             {!isLast && (
-              <span className="ms-sharp fs-16px tc-[neutral-700]">
+              <span className="ms-sharp fs-16px tc-{neutral-700}">
                 chevron_right
               </span>
             )}
