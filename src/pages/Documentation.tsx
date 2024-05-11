@@ -42,7 +42,7 @@ const Documentation: React.FC = () => {
     if (headings.length === 0) {
       return (
         <>
-          <p className="text-lg font-medium tc-[neutral-800]">
+          <p className="text-lg font-medium tc-{neutral-800}">
             Nothing to show
           </p>
         </>
@@ -50,11 +50,11 @@ const Documentation: React.FC = () => {
     } else {
       return (
         <>
-          <p className="text-lg font-medium tc-[neutral-800]">On this page</p>
-          <ul className="border list-none bw-left-2px bc-[neutral-400] pl-1rem pv-8px mt-0.5rem">
+          <p className="text-lg font-medium tc-{neutral-800}">On this page</p>
+          <ul className="border list-none bw-left-2px bc-{neutral-400} pl-1rem pv-8px mt-0.5rem">
             {headings.map((heading, index) => (
               <li key={index} className="text-base font-light">
-                <a href={`#${heading.id}`} className="tc-[neutral-700]">
+                <a href={`#${heading.id}`} className="tc-{neutral-700}">
                   {heading.text}
                 </a>
               </li>
@@ -67,7 +67,7 @@ const Documentation: React.FC = () => {
 
   return (
     <>
-      <div className="d-[docs-layout]">
+      <div className="d-{docs-layout}">
         <DocsSidebar />
         <article className="main-content fx-70% h-mn-100vh pt-4rem">
           <Routes>
@@ -79,7 +79,7 @@ const Documentation: React.FC = () => {
                   <>
                     <div className="ph-2rem pt-2rem">
                       <Breadcrumbs />
-                      <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                      <div className="min-lg-none mb-2rem bg-{neutral-200} p-1rem br-2px shadow-md">
                         {renderOnThisPageSection()}
                       </div>
                     </div>
@@ -101,7 +101,7 @@ const Documentation: React.FC = () => {
                       />
                       <div className="ph-2rem pt-2rem">
                         <Breadcrumbs pageTitle={page.title} />
-                        <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                        <div className="min-lg-none mb-2rem bg-{neutral-200} p-1rem br-2px shadow-md">
                           {renderOnThisPageSection()}
                         </div>
                       </div>
@@ -126,25 +126,22 @@ const Documentation: React.FC = () => {
                             <Link
                               key={route.slug}
                               to={`/docs${routeGroup.slug}${route.slug}`}
-                              className="fx-250px bg-[neutral-200] p-1.5rem br-4px tc-[neutral-900] flex-center gap-1rem shadow-md border bw-1px bc-transparent hover:border-primary"
+                              className="flex-[1\_1\_250px] bg-{neutral-200} p-1.5rem br-4px tc-{neutral-900} shadow-md border bw-1px bc-transparent hover:border-primary"
                             >
-                              {/* <span className="ms-sharp text-xl tc-[accent-500]">
+                              {/* <span className="ms-sharp text-xl tc-{accent-500}">
                                 {route.icon || "book"}
                               </span> */}
                               <header>
-                                <span className="ms-sharp text-3xl tc-[accent-500] mb-8px">
+                                <span className="ms-sharp text-3xl tc-{accent-500} mb-8px">
                                   {route.icon || "book"}
                                 </span>
                                 <h2 id="route-group" className="text-lg">
                                   {route.name}
                                 </h2>
-                                <p className="text-sm tc-[neutral-700]">
+                                <p className="text-sm tc-{neutral-700}">
                                   {route.desc}
                                 </p>
                               </header>
-                              <span className="ms-sharp text-base tc-[accent-500] ml-auto">
-                                {/* chevron_right */}
-                              </span>
                             </Link>
                           ))}
                         </div>
@@ -170,7 +167,7 @@ const Documentation: React.FC = () => {
                           />
                           <div className="ph-2rem pt-2rem">
                             <Breadcrumbs pageTitle={route.name} />
-                            <div className="min-lg-none mb-2rem bg-[neutral-200] p-1rem br-2px shadow-md">
+                            <div className="min-lg-none mb-2rem bg-{neutral-200} p-1rem br-2px shadow-md">
                               {renderOnThisPageSection()}
                             </div>
                           </div>
@@ -184,7 +181,7 @@ const Documentation: React.FC = () => {
             </Route>
           </Routes>
         </article>
-        <div className="fx-15% h-100vh max-lg-none position-[docs-position] t-4rem pt-2rem">
+        <div className="fx-15% h-100vh max-lg-none position-{docs-position} t-4rem p-2rem pt-2rem">
           {renderOnThisPageSection()}
         </div>
       </div>

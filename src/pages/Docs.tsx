@@ -11,7 +11,7 @@ const Docs = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
         repudiandae ipsa facilis nihil nostrum natus?
       </p>
-      <blockquote className="mt-1.5rem border bw-left-2px bc-[neutral-400] pl-1.5rem font-s-italic">
+      <blockquote className="mt-1.5rem border bw-left-2px bc-{neutral-400} pl-1.5rem font-s-italic">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem.
       </blockquote>
     </Section>

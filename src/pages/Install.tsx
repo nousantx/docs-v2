@@ -19,7 +19,7 @@ const Install = () => {
         Add TenoxUI
       </h2>
 
-      <p id="npm" className="text-lg font-medium tc-[neutral-900] mt-1.6rem">
+      <p id="npm" className="text-lg font-medium tc-{neutral-900} mt-1.6rem">
         Using NPM
       </p>
 
@@ -35,7 +35,7 @@ const Install = () => {
         title="shell"
       >{`yarn add tenoxui -D`}</Code>
 
-      <p id="cdn" className="text-lg font-medium tc-[neutral-900] mt-1.6rem">
+      <p id="cdn" className="text-lg font-medium tc-{neutral-900} mt-1.6rem">
         Using CDN
       </p>
 
