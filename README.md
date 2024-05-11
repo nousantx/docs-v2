@@ -33,11 +33,11 @@ yarn dev
 Add tenoxui to your project
 
 ```sh
-npm install tenoxui --save-dev
+npm install tenoxui @tenoxui/property --save-dev
 ```
 or
 ```sh
-yarn add tenoxui -D
+yarn add tenoxui @tenoxui/property -D
 ```
 
 App.jsx
@@ -45,10 +45,11 @@ App.jsx
 ```jsx
 import { useLayoutEffect } from "react";
 import tenoxui from "tenoxui";
+import property from "@tenoxui/property";
 
 const App = () => {
   useLayoutEffect(() => {
-    tenoxui();
+    tenoxui(property);
   }, []);
   return <h1 className="tc-red">Hello World</h1>;
 };
