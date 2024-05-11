@@ -11,6 +11,7 @@
     "serve": "live-server dist"
   },
   "dependencies": {
+    "@tenoxui/property": "^1.0.0-alpha.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4"
@@ -32,7 +33,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.23.0",
     "react-syntax-highlighter": "^15.5.0",
-    "tenoxui": "0.8.0",
+    "tenoxui": "0.9.0-alpha.5",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
