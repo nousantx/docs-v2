@@ -76,11 +76,21 @@ const Background = () => {
         lang="html"
         className="mt-1rem"
         isWrap
-      >{`<div class="box-100px bg-img-{url(...)} bg-size-cover bg-loc-center"></div>`}</Code>
+      >{`<div class="box-100px bg-img-[url(...)] bg-size-cover bg-loc-center"></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px bg-img-[url(https://tenoxui.web.app/img/tenoxui.svg)] bg-size-cover bg-loc-center border bw-1px bc-{neutral-300} br-8px"></div>
+        <div className="box-100px bg-img-[url(https://tenoxui.web.app/img/tenoxui.svg)] bg-size-cover bg-loc-center border bw-1px bc-$neutral-300 br-8px"></div>
       </CodeOutput>
+
+      <p className="text-xs mt-8px tc-$neutral-600">
+        Note : You can download the image{" "}
+        <a
+          href="https://tenoxui.web.app/img/tenoxui.svg"
+          className="underline td-c-$accent-500"
+        >
+          here
+        </a>
+      </p>
 
       <p className="paragraph mt-1.5rem">
         Code above is showed how to add background image to the element using

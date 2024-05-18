@@ -83,10 +83,9 @@ const Flex = () => {
       </ul>
 
       <DocLink
-        edit="/docs/classes/Flex.tsx"
-        prev="/docs/classes/align"
-        prevTitle="Align Items"
-        prevIcon="align_vertical_center"
+        edit="/docs/classes/Flex"
+        prev="/docs/classes/filter"
+        prevIcon="tune"
         next="/docs/classes/flexbox"
         nextTitle="Flexbox"
         nextIcon="flex_wrap"

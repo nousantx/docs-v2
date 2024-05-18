@@ -48,29 +48,29 @@ const Code: React.FC<Code> = ({
     <div className={`w-full relative ${className}`}>
       {/* {copy && ( */}
       <div
-        className={`position-fixed t-4.5rem r--100% bg-{neutral-100} tc-{neutral-900} ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-8px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md z-9999 ${
+        className={`position-fixed t-4.5rem r--100% bg-$neutral-100 tc-$neutral-900 ta-center br-4px p-8px ph-1rem z-9999 flex-center gap-8px tr-prop-all tr-time-0.3s tr-timing-ease shadow-md z-9999 ${
           copy ? "opa-1 r-1rem" : "opa-0 r--100%"
         }`}
       >
-        <span className="ms-sharp tc-{accent-500} text-lg">inventory</span>
+        <span className="ms-sharp tc-$accent-500 text-lg">inventory</span>
         Code copied successfully!
       </div>
       {!codeOnly ? (
         <div
-          className={`w-full flex space-between items-center bg-{neutral-200} p-10px radius-top-4px`}
+          className={`w-full flex space-between items-center bg-$neutral-200 p-10px radius-top-4px`}
         >
           <p className="text-sm font-medium flex-center gap-6px">
-            <span className="ms-sharp text-base tc-{accent-500}">draft</span>
+            <span className="ms-sharp text-base tc-$accent-500">draft</span>
             {title || lang}
           </p>
           {copy ? (
-            <button className="btn flex-center gap-6px tc-{neutral-800}">
+            <button className="btn flex-center gap-6px tc-$neutral-800">
               <span className="ms-sharp fs-16px">done</span>{" "}
               <p className="text-sm font-medium">Copied</p>
             </button>
           ) : (
             <button
-              className="btn flex-center gap-6px tc-{neutral-800}"
+              className="btn flex-center gap-6px tc-$neutral-800"
               onClick={() => {
                 const textarea = document.createElement("textarea");
                 textarea.value = codeString;

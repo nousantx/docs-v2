@@ -63,11 +63,12 @@ const Filter = () => {
       </CodeOutput>
 
       <DocLink
-        edit="/docs/classes/Filter"
-        prev="/docs/classes/cursor"
-        prevIcon="mouse"
-        next="/docs/classes/filter"
-        nextIcon="tune"
+        edit="/docs/classes/Display"
+        prev="/docs/classes/display"
+        prevIcon="fullscreen"
+        next="/docs/classes/flexbox"
+        nextTitle="Flexbox"
+        nextIcon="flex_wrap"
       />
     </Section>
   );

@@ -117,11 +117,7 @@
 /* 2xl */
 @media (min-width: 1546px) {
 }
-html {
-  transition-property: color, background-color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
+
 html.darkmode {
   --neutral-950: rgb(250, 250, 250);
   --neutral-900: rgb(245 245 245);
@@ -150,7 +146,7 @@ html.darkmode {
   --warning-200-opa: #fff3be20;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
   max-height: 5px;
 }
@@ -167,4 +163,4 @@ html.darkmode {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-300);
   transition: all 0.3s;
-}
+} */

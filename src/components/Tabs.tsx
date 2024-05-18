@@ -26,9 +26,9 @@ const Tabs: React.FC<TabItemProps> = ({ children }) => {
           return (
             <div
               key={index}
-              className={`cursor-pointer center tc-{neutral-900} p-8px ${trans_all} ${
+              className={`cursor-pointer center tc-neutral-900 p-8px ${trans_all} ${
                 index === activeTab
-                  ? "back-c-{accent-500} tc-{neutral-100} rounded"
+                  ? "back-c-accent-500 tc-neutral-100 rounded"
                   : "bw-0 back-c-transparent"
               }`}
               onClick={() => handleTabClick(index)}
@@ -38,7 +38,7 @@ const Tabs: React.FC<TabItemProps> = ({ children }) => {
           );
         })}
       </div>
-      <div className="bg-{neutral-200} rounded">
+      <div className="bg-neutral-200 rounded">
         {React.Children.toArray(children)[activeTab]}
       </div>
     </div>

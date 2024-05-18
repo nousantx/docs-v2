@@ -9,7 +9,7 @@ const AspectRatio = () => {
   useStyles();
 
   makeStyles({
-    ".square": "ratio-{1/1}",
+    ".square": "ratio-[1/1]",
   });
 
   return (
@@ -28,8 +28,8 @@ const AspectRatio = () => {
       </p>
 
       <p className="paragraph mt-8px">
-        You can use <code>ratio-{"{value}"}</code> to set aspect-ratio property.
-        Here's the example :
+        You can use <code className="primary">ratio-{"{value}"}</code> to set
+        aspect-ratio property. Here's the example :
       </p>
 
       <Code
@@ -42,16 +42,16 @@ const AspectRatio = () => {
 
       <CodeOutput>
         <div className="flex-center gap-1rem flex-wrap">
-          <div className="ratio-1/1 bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-1/1 bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             1 / 1
           </div>
-          <div className="ratio-[16/9] bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-[16/9] bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             16 / 9
           </div>
-          <div className="ratio-[4/5] bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-[4/5] bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             4 / 5
           </div>
-          <div className="ratio-[2/1] bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-[2/1] bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             2 / 1
           </div>
         </div>
@@ -90,10 +90,10 @@ const AspectRatio = () => {
 
       <CodeOutput>
         <div className="flex-center flex-wrap gap-1rem">
-          <div className="ratio-1/1 bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-1/1 bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             Square
           </div>
-          <div className="ratio-[16/9] bg-{accent-500} h-100px flex-center tc-{neutral-100} fw-500 text-sm br-4px">
+          <div className="ratio-[16/9] bg-$accent-500 h-100px flex-center tc-$neutral-100 fw-500 text-sm br-4px">
             Video
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { makeStyles } from "tenoxui";
 import Code from "../../components/Code";
 import CodeOutput from "../../components/CodeOutput";
 import DocLink from "../../components/DocsNavigation";
@@ -7,10 +6,6 @@ import { useStyles } from "../../hooks/useStyles";
 
 const Border = () => {
   useStyles();
-
-  makeStyles({
-    ".square": "ratio-{1/1}",
-  });
 
   return (
     <Section>
@@ -121,10 +116,10 @@ const Border = () => {
         lang="html"
         className="mt-1rem"
         isWrap
-      >{`<div class="... bs-solid bw-2px br-1000px bc-{...}">Hello</div>`}</Code>
+      >{`<div class="... bs-solid bw-2px br-1000px bc-[...]">Hello</div>`}</Code>
 
       <CodeOutput>
-        <div className="ph-1rem pv-8px bs-solid bw-2px br-1000px bc-{accent-500}">
+        <div className="ph-1rem pv-8px bs-solid bw-2px br-1000px bc-$accent-500">
           Hello
         </div>
       </CodeOutput>
@@ -140,7 +135,7 @@ const Border = () => {
       >{`<div class="radius-tl-1rem radius-br-1rem ..."></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px radius-tl-1rem radius-br-1rem bw-2px bs-solid bc-{accent-500}"></div>
+        <div className="box-100px radius-tl-1rem radius-br-1rem bw-2px bs-solid bc-$accent-500"></div>
       </CodeOutput>
 
       <h3 className="text-lg mt-1rem">Working with radius</h3>
@@ -154,7 +149,7 @@ const Border = () => {
       >{`<div class="radius-top-1rem ..."></div>`}</Code>
 
       <CodeOutput>
-        <div className="box-100px radius-top-1rem bw-2px bs-solid bc-{accent-500}"></div>
+        <div className="box-100px radius-top-1rem bw-2px bs-solid bc-$accent-500"></div>
       </CodeOutput>
 
       <DocLink

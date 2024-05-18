@@ -1,5 +1,8 @@
+import { ReactElement } from "react";
+
 export interface RouteGroup {
   name: string;
+  sub?: string | ReactElement;
   desc: string;
   slug: string;
   routes: Route[];

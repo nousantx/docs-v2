@@ -28,20 +28,20 @@ const CLI = () => {
               </p>
             }
           >
-            <span className="ms-sharp fs-3rem tc-{accent-500}">qr_code</span>
+            <span className="ms-sharp fs-3rem tc-$accent-500">qr_code</span>
             <h2 className="mt-1rem">Let Features</h2>
-            <p className="tc-{neutral-800} ta-justify">
+            <p className="tc-$neutral-800 ta-justify">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur dolorum nam labore alias mollitia?
             </p>
           </TabItem>
           <TabItem title={<span className="ms-sharp fs-16px">add</span>}>
             <h2>Let's add new content here</h2>
-            <p className="tc-{neutral-800} ta-justify">
+            <p className="tc-$neutral-800 ta-justify">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur dolorum nam labore alias mollitia?
             </p>
-            <button className="btn ph-12px pv-4px bg-{primary-500} mt-1rem tc-{neutral-100} text-base br-4px">
+            <button className="btn ph-12px pv-4px bg-$primary-500 mt-1rem tc-$neutral-100 text-base br-4px">
               More
             </button>
           </TabItem>

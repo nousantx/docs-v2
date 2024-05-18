@@ -14,9 +14,9 @@ const Navbar: React.FC = () => {
     <nav className="shadow-md">
       <Link to="/">
         <header>
-          <p className="flex-center text-base tc-{neutral-900} gap-6px font-medium">
-            tenoxUI <span className="tc-{neutral-500}">/</span>{" "}
-            <span className="tc-{accent-500}">CSS</span>
+          <p className="flex-center text-base tc-$neutral-900 gap-6px font-medium">
+            tenoxUI <span className="tc-$neutral-500">/</span>{" "}
+            <span className="tc-$accent-500">CSS</span>
           </p>
         </header>
       </Link>
@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
         <li>
           <button
             onClick={toggleDarkMode}
-            className="btn flex-center box-30px border bw-1px bc-{neutral-400} br-4px"
+            className="btn flex-center box-30px border bw-1px bc-$neutral-400 br-4px"
           >
-            <span className="mi-sharp text-base tc-{neutral-900}">
+            <span className="mi-sharp text-base tc-$neutral-900">
               {darkMode ? "light_mode" : "nights_stay"}
             </span>
           </button>
