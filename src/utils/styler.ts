@@ -1,4 +1,4 @@
-import tenoxui, { makeStyles, applyHovers } from "tenoxui";
+import tenoxui, { makeStyles, applyHovers, use } from "tenoxui";
 import property from "@tenoxui/property";
 import { styles } from "./style";
 
@@ -8,7 +8,28 @@ export function styler() {
    * apply custom styles. Note: always use makeStyles after initiate -
    * tenoxui function if define utility classes (optional)
    */
-  // tenoxui(property);
+  use(property, {
+    d: "display",
+    bdr: "border",
+    bc: "borderColor",
+    sc: "scale",
+    scroll: "scrollBehavior",
+
+    "back-c": "backgroundColor",
+    "font-s": "fontStyle",
+    "bg-img": "backgroundImage",
+    tn: "textTransform",
+    // text-decoration
+    "td-li": "textDecorationLine",
+    "td-c": "textDecorationColor",
+    "td-s": "textDecorationStyle",
+    "td-t": "textDecorationThickness",
+    "td-o": "textDecorationOffset",
+    "li-s-loc": "listStylePosition",
+    "li-s-type": "listStyleType",
+    shadow: "boxShadow",
+    isolation: "isolation",
+  });
   makeStyles(styles);
   applyHovers({
     "nav ul li": [
@@ -37,27 +58,6 @@ export function styler() {
       "tr-prop-all border bw-1px tr-time-0.3s",
     ],
   });
-  tenoxui(property, {
-    d: "display",
-    bdr: "border",
-    bc: "borderColor",
-    sc: "scale",
-    scroll: "scrollBehavior",
-
-    "back-c": "backgroundColor",
-    "font-s": "fontStyle",
-    "bg-img": "backgroundImage",
-    tn: "textTransform",
-    // text-decoration
-    "td-li": "textDecorationLine",
-    "td-c": "textDecorationColor",
-    "td-s": "textDecorationStyle",
-    "td-t": "textDecorationThickness",
-    "td-o": "textDecorationOffset",
-    "li-s-loc": "listStylePosition",
-    "li-s-type": "listStyleType",
-    shadow: "boxShadow",
-    isolation: "isolation",
-  });
+  tenoxui();
   // init tenoxui function to handle all styles
 }

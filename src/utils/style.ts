@@ -8,19 +8,19 @@ type Styles = typeObjects | Record<string, typeObjects>;
 // all styles
 export const styles: Styles = {
   html: "scroll-smooth",
-  body: "family-[--font-body] bg-{neutral-100} tc-{neutral-900}",
-  p: "family-[--font-body] tc-{neutral-800} lh-1.75rem",
+  body: "family-[--font-body] bg-$neutral-100 tc-$neutral-900",
+  p: "family-[--font-body] tc-$neutral-800 lh-1.75rem",
   code: "family-[--font-mono]",
-  a: "tc-{neutral-800}",
+  a: "tc-$neutral-800",
   "p code, .code":
-    "family-[--font-mono] tc-{neutral-900} bg-{neutral-200-opa} ph-6px br-4px fw-500 fs-80%",
-  "code.primary": "tc-{accent-500}",
-  "code span.primary": "tc-{accent-500}",
+    "family-[--font-mono] tc-$neutral-900 bg-$neutral-200-opa ph-6px br-4px fw-500 fs-80%",
+  "code.primary": "tc-$accent-500",
+  "code span.primary": "tc-$accent-500",
   "p.text, .paragraph, .para": "fs-1rem lh-1.5rem ta-justify",
   nav: {
-    "": "bg-{neutral-100} w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[--sb] position-fixed t-0 l-0 r-0 z-998",
+    "": "bg-$neutral-100 w-100% w-mx-1440px mh-auto p-2rem pv-1rem d-flex flex-parent-center jc-[--sb] position-fixed t-0 l-0 r-0 z-998",
     ul: "d-flex flex-parent-center",
-    "ul li": "d-flex flex-parent-center tc-{neutral-800} cursor-pointer",
+    "ul li": "d-flex flex-parent-center tc-$neutral-800 cursor-pointer",
     a: "tc-inherit",
   },
   // heading
@@ -35,10 +35,10 @@ export const styles: Styles = {
   ".flex-wrap": "d-flex flex-wrap-wrap",
   ".space-between": "jc-[space-between]",
   ".items-center": "ai-center",
-  "a.breadcrumb-link": "tc-{neutral-700} td-li-none",
+  "a.breadcrumb-link": "tc-$neutral-700 td-li-none",
   "a.breadcrumb-link.last.active":
-    "tc-{neutral-900} td-li-underline td-c-[--accent-500]",
-  ".btn": "bg-none bdr-none tc-{neutral-900} cursor-pointer fw-500",
+    "tc-$neutral-900 td-li-underline td-c-[--accent-500]",
+  ".btn": "bg-none bdr-none tc-$neutral-900 cursor-pointer fw-500",
   ".flex-1": "flex-grow-1 flex-shrink-1 flex-basis-0%",
   ".center": "flex-parent-center",
   ".space > * + *": "ml-1rem",
@@ -48,17 +48,17 @@ export const styles: Styles = {
     a: "tc-inherit",
   },
   ".sidebar-group": {
-    ".sidebar-link": "tc-{neutral-900}",
-    ".sidebar-link.active": "tc-{accent-500}",
-    ".sidebar-route-link": "tc-{neutral-600} bw-0 bc-transparent p-0",
+    ".sidebar-link": "tc-$neutral-900",
+    ".sidebar-link.active": "tc-$accent-500",
+    ".sidebar-route-link": "tc-$neutral-600 bw-0 bc-transparent p-0",
     ".sidebar-route-link.active":
-      "bs-solid bw-0 bw-left-1px pl-8px bc-[--accent-500] tc-{neutral-900}",
+      "bs-solid bw-0 bw-left-1px pl-8px bc-[--accent-500] tc-$neutral-900",
   },
-  ".nav-link": "bs-solid bw-0 bw-bottom-1px bc-transparent tc-{neutral-600}",
-  ".nav-link.active": "bc-[--accent-500] tc-{neutral-900}",
+  ".nav-link": "bs-solid bw-0 bw-bottom-1px bc-transparent tc-$neutral-600",
+  ".nav-link.active": "bc-[--accent-500] tc-$neutral-900",
   // footer
   ".footer-link": {
-    "": "mt-0.75rem  tc-{neutral-800}",
+    "": "mt-0.75rem  tc-$neutral-800",
     a: "tc-inherit",
   },
   // important selector must be last
@@ -146,7 +146,7 @@ export const styles: Styles = {
   ".text-nowrap": "white-space-nowrap",
   ".isolate": "isolation-isolate",
   ".border": "bs-solid bw-0",
-  ".text-primary, .text-primary-500": "tc-{accent-500}",
+  ".text-primary, .text-primary-500": "tc-$accent-500",
   ".space-x-4 > * + *": "ml-1rem",
   ".space-y-4 > * + *": "mt-1rem",
   // list style position
@@ -162,8 +162,8 @@ export const styles: Styles = {
     li: {
       "": "fs-1rem lh-1.5rem mt-8px",
       "code, span.code":
-        "tc-{neutral-900} bg-{neutral-200} ph-6px br-4px fw-500 fs-80%",
-      "code.primary, span.code.primary": "tc-{accent-500}",
+        "tc-$neutral-900 bg-$neutral-200 ph-6px br-4px fw-500 fs-80%",
+      "code.primary, span.code.primary": "tc-$accent-500",
     },
   },
 };
